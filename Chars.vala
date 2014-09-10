@@ -30,12 +30,28 @@
 //
 
 public class Chars{
-	public static string modText(string text){
+	public static string modText(string text, int type){
 		
 		string lines[6];
-		for(int i = 0; i < 6; i++){
-			lines[i] = "//  ";
+		if(type == 0){
+			for(int i = 0; i < 6; i++){
+				lines[i] = "//  ";
+			}
+		}else if(type == 1){
+			lines[0] = "/*  ";
+			for(int i = 1; i < 6; i++){
+				lines[i] = " *  ";
+			}
+		}else if(type == 2){
+			for(int i = 0; i < 6; i++){
+				lines[i] = "#  ";
+			}
+		}else if(type == 3){
+			for(int i = 0; i < 6; i++){
+				lines[i] = "  ";
+			}
 		}
+		
 
 		for(var i = 0; i < text.length; i++){
 			switch(text[i]){

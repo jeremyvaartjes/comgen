@@ -30,6 +30,7 @@
 //
 
 Gtk.Window window;
+int type;
 string version;
 bool showVersion;
 string authors;
@@ -49,6 +50,16 @@ void settingsPanel(){
 	var layoutSettings = new Gtk.Grid ();
 	layoutSettings.set_row_spacing(8);
 
+	var typeLabel = new Gtk.Label("Comment type ");
+	var typeCombo = new Gtk.ComboBoxText();
+	typeCombo.append_text("// C++ style");
+	typeCombo.append_text("/* C style */");
+	typeCombo.append_text("# Bash style");
+	typeCombo.append_text("<!-- HTML style -->");
+	typeCombo.active = type;
+	layoutSettings.attach (typeLabel, 0, 0, 1, 1);
+	layoutSettings.attach (typeCombo, 1, 0, 1, 1);
+
 	var versionEntry = new Gtk.Entry();
 	var versionCheck = new Gtk.CheckButton.with_label ("Show Version Text");
 	versionCheck.toggled.connect (() => {
@@ -58,13 +69,13 @@ void settingsPanel(){
 			versionEntry.set_sensitive(false);
 		}
 	});
-	layoutSettings.attach (versionCheck, 0, 0, 2, 1);
+	layoutSettings.attach (versionCheck, 0, 1, 2, 1);
 
-	var versionLabel = new Gtk.Label("Version ");
+	var versionLabel = new Gtk.Label("Version");
 	versionEntry.set_text(version);
 	versionEntry.set_hexpand(true);
-	layoutSettings.attach (versionLabel, 0, 1, 1, 1);
-	layoutSettings.attach (versionEntry, 1, 1, 1, 1);
+	layoutSettings.attach (versionLabel, 0, 2, 1, 1);
+	layoutSettings.attach (versionEntry, 1, 2, 1, 1);
 	versionEntry.set_sensitive(showVersion);
 	if(showVersion == true){
 		versionCheck.set_active(true);
@@ -81,18 +92,16 @@ void settingsPanel(){
 			authorsBox.set_sensitive(false);
 		}
 	});
-	layoutSettings.attach (authorsCheck, 0, 2, 2, 1);
+	layoutSettings.attach (authorsCheck, 0, 3, 2, 1);
 
 	var authorsLabel = new Gtk.Label("Authors");
-	authorsLabel.set_hexpand(true);
-	authorsLabel.set_justify(Gtk.Justification.LEFT);
 	authorsBox.buffer.text = authors;
 	var scrollAreaAuth = new Gtk.ScrolledWindow (null, null);
 	scrollAreaAuth.add(authorsBox);
 	scrollAreaAuth.set_hexpand(true);
 	scrollAreaAuth.set_vexpand(true);
-	layoutSettings.attach (authorsLabel, 0, 3, 2, 1);
-	layoutSettings.attach (scrollAreaAuth, 0, 4, 2, 1);
+	layoutSettings.attach (authorsLabel, 0, 4, 2, 1);
+	layoutSettings.attach (scrollAreaAuth, 0, 5, 2, 1);
 	authorsBox.set_sensitive(showAuthors);
 	if(showAuthors == true){
 		authorsCheck.set_active(true);
@@ -109,7 +118,7 @@ void settingsPanel(){
 			legalBox.set_sensitive(false);
 		}
 	});
-	layoutSettings.attach (legalCheck, 0, 5, 2, 1);
+	layoutSettings.attach (legalCheck, 0, 6, 2, 1);
 
 	var legalLabel = new Gtk.Label("Legal Info");
 	legalLabel.set_hexpand(true);
@@ -119,8 +128,8 @@ void settingsPanel(){
 	scrollAreaLegal.add(legalBox);
 	scrollAreaLegal.set_hexpand(true);
 	scrollAreaLegal.set_vexpand(true);
-	layoutSettings.attach (legalLabel, 0, 6, 2, 1);
-	layoutSettings.attach (scrollAreaLegal, 0, 7, 2, 1);
+	layoutSettings.attach (legalLabel, 0, 7, 2, 1);
+	layoutSettings.attach (scrollAreaLegal, 0, 8, 2, 1);
 	legalBox.set_sensitive(showLegal);
 	if(showLegal == true){
 		legalCheck.set_active(true);
@@ -145,18 +154,20 @@ void settingsPanel(){
 		}else{
 			showLegal = false;
 		}
+		type = typeCombo.active;
 		version = versionEntry.get_text();
 		authors = authorsBox.buffer.text;
 		legal = legalBox.buffer.text;
 		windowSettings.destroy();
 	});
-	layoutSettings.attach(saveButton, 0, 8, 2, 1);
+	layoutSettings.attach(saveButton, 0, 9, 2, 1);
 
 	windowSettings.add(layoutSettings);
 	windowSettings.show_all();
 }
 
 int main (string[] args) {
+	type = 0;
 	version = "0.0.1";
 	showVersion = false;
 	authors = "John Doe <john.doe@gmail.com>";
@@ -169,7 +180,7 @@ int main (string[] args) {
 	window = new Gtk.Window ();
 	window.title = "Comment Generator";
 	window.set_position (Gtk.WindowPosition.CENTER);
-	window.set_default_size (480, 240);
+	window.set_default_size (520, 340);
 	window.destroy.connect (Gtk.main_quit);
 
 	var layout = new Gtk.Grid ();
@@ -189,16 +200,37 @@ int main (string[] args) {
 	layout.attach (scrollArea, 0, 1, 2, 1);
 
 	commentEntry.activate.connect (() => {
-		string headingText = Chars.modText(commentEntry.get_text());
+		string headingText = Chars.modText(commentEntry.get_text(), type);
 		int lineWidth = headingText.length / 6;
+		if(type == 3){
+			headingText = "<!--\n" + headingText;
+		}
 		string versionText = "Version " + version;
-		if(versionText.length < (lineWidth - 4)){
+		if(versionText.length < (lineWidth - 4) && (type == 0 || type == 1)){
 			int versionTextLength = versionText.length;
 			for(int i = 0; i < lineWidth - 4 - versionTextLength; i++){
 				versionText = " " + versionText;
 			}
+		}else if(versionText.length < (lineWidth - 3) && type == 2){
+			int versionTextLength = versionText.length;
+			for(int i = 0; i < lineWidth - 3 - versionTextLength; i++){
+				versionText = " " + versionText;
+			}
+		}else if(versionText.length < (lineWidth - 2) && type == 3){
+			int versionTextLength = versionText.length;
+			for(int i = 0; i < lineWidth - 2 - versionTextLength; i++){
+				versionText = " " + versionText;
+			}
 		}
-		versionText = "//  " + versionText;
+		if(type == 0){
+			versionText = "//  " + versionText;
+		}else if(type == 1){
+			versionText = " *  " + versionText;
+		}else if(type == 2){
+			versionText = "#  " + versionText;
+		}else if(type == 3){
+			versionText = "  " + versionText;
+		}
 
 		string authorsText = authors;
 		int pos = 0;
@@ -215,13 +247,31 @@ int main (string[] args) {
 			}
 
 			string line = authorsText.substring(pos, authorsText.index_of_char('\n', pos) - pos);
-			if(line.length < (lineWidth - 4)){
+			if(line.length < (lineWidth - 4) && (type == 0 || type == 1)){
 				int lineLength = line.length;
 				for(int i2 = 0; i2 < lineWidth - 4 - lineLength; i2++){
 					line = " " + line;
 				}
+			}else if(line.length < (lineWidth - 3) && type == 2){
+				int lineLength = line.length;
+				for(int i2 = 0; i2 < lineWidth - 3 - lineLength; i2++){
+					line = " " + line;
+				}
+			}else if(line.length < (lineWidth - 2) && type == 3){
+				int lineLength = line.length;
+				for(int i2 = 0; i2 < lineWidth - 2 - lineLength; i2++){
+					line = " " + line;
+				}
 			}
-			newAuthorsText = newAuthorsText + "//  " + line;
+			if(type == 0){
+				newAuthorsText = newAuthorsText + "//  " + line;
+			}else if(type == 1){
+				newAuthorsText = newAuthorsText + " *  " + line;
+			}else if(type == 2){
+				newAuthorsText = newAuthorsText + "#  " + line;
+			}else if(type == 3){
+				newAuthorsText = newAuthorsText + "  " + line;
+			}
 			pos = authorsText.index_of_char('\n', pos) + 1;
 		}
 
@@ -232,34 +282,119 @@ int main (string[] args) {
 			pos = legalText.index_of_char('\n', pos + 1);
 			lineCounter++;
 		}
-		string newLegalText = "// ";
-		for(int i = 0; i < lineWidth - 3; i++){
-			newLegalText = newLegalText + "=";
+		string newLegalText = "";
+		if(type == 0){
+			newLegalText = "// ";
+		}else if(type == 1){
+			newLegalText = " * ";
+		}else if(type == 2){
+			newLegalText = "# ";
+		}else if(type == 3){
+			newLegalText = " ";
 		}
-		newLegalText = newLegalText + "\n//\n";
+		if(type == 0 || type == 1){
+			for(int i = 0; i < lineWidth - 3; i++){
+				newLegalText = newLegalText + "=";
+			}
+		}else if(type == 2){
+			for(int i = 0; i < lineWidth - 2; i++){
+				newLegalText = newLegalText + "=";
+			}
+		}else if(type == 3){
+			for(int i = 0; i < lineWidth - 1; i++){
+				newLegalText = newLegalText + "=";
+			}
+		}
+		if(type == 0){
+			newLegalText = newLegalText + "\n//\n";
+		}else if(type == 1){
+			newLegalText = newLegalText + "\n *\n";
+		}else if(type == 2){
+			newLegalText = newLegalText + "\n#\n";
+		}else if(type == 3){
+			newLegalText = newLegalText + "\n  \n";
+		}
 		pos = 0;
 		for(int i = 0; i < lineCounter; i++){
 			if(i != 0){
 				newLegalText = newLegalText + "\n";
 			}
 
-			newLegalText = newLegalText + "//  " + legalText.substring(pos, legalText.index_of_char('\n', pos) - pos);
+			if(type == 0){
+				newLegalText = newLegalText + "//  " + legalText.substring(pos, legalText.index_of_char('\n', pos) - pos);
+			}else if(type == 1){
+				newLegalText = newLegalText + " *  " + legalText.substring(pos, legalText.index_of_char('\n', pos) - pos);
+			}else if(type == 2){
+				newLegalText = newLegalText + "#  " + legalText.substring(pos, legalText.index_of_char('\n', pos) - pos);
+			}else if(type == 3){
+				newLegalText = newLegalText + "  " + legalText.substring(pos, legalText.index_of_char('\n', pos) - pos);
+			}
 			pos = legalText.index_of_char('\n', pos) + 1;
 		}
-		newLegalText = newLegalText + "\n//\n// ";
-		for(int i = 0; i < lineWidth - 3; i++){
-			newLegalText = newLegalText + "=";
+		if(type == 0){
+			newLegalText = newLegalText + "\n//\n// ";
+		}else if(type == 1){
+			newLegalText = newLegalText + "\n *\n * ";
+		}else if(type == 2){
+			newLegalText = newLegalText + "\n#\n# ";
+		}else if(type == 3){
+			newLegalText = newLegalText + "\n  \n ";
+		}
+		if(type == 0 || type == 1){
+			for(int i = 0; i < lineWidth - 3; i++){
+				newLegalText = newLegalText + "=";
+			}
+		}else if(type == 2){
+			for(int i = 0; i < lineWidth - 2; i++){
+				newLegalText = newLegalText + "=";
+			}
+		}else if(type == 3){
+			for(int i = 0; i < lineWidth - 1; i++){
+				newLegalText = newLegalText + "=";
+			}
 		}
 
 		string footer = "";
 		if(showVersion == true){
-			footer = footer + "\n" + versionText + "\n//";
+			footer = footer + "\n" + versionText + "\n";
+			if(type == 0){
+				footer = footer + "//";
+			}else if(type == 1){
+				footer = footer + " *";
+			}else if(type == 2){
+				footer = footer + "#";
+			}else if(type == 3){
+				footer = footer + "  ";
+			}
 		}
 		if(showAuthors == true){
-			footer = footer + "\n" + newAuthorsText + "\n//";
+			footer = footer + "\n" + newAuthorsText + "\n";
+			if(type == 0){
+				footer = footer + "//";
+			}else if(type == 1){
+				footer = footer + " *";
+			}else if(type == 2){
+				footer = footer + "#";
+			}else if(type == 3){
+				footer = footer + "  ";
+			}
 		}
 		if(showLegal == true){
-			footer = footer + "\n" + newLegalText + "\n//";
+			footer = footer + "\n" + newLegalText + "\n";
+			if(type == 0){
+				footer = footer + "//";
+			}else if(type == 1){
+				footer = footer + " *";
+			}else if(type == 2){
+				footer = footer + "#";
+			}else if(type == 3){
+				footer = footer + "  ";
+			}
+		}
+		if(type == 1){
+			footer = footer + "\n */";
+		}else if(type == 3){
+			footer = footer + "\n-->";
 		}
 		copyArea.buffer.text = headingText + footer;
 	});
