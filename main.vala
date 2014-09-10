@@ -38,6 +38,209 @@ bool showAuthors;
 string legal;
 bool showLegal;
 
+Gtk.Entry commentEntry;
+Gtk.TextView copyArea;
+
+void updateMainArea(){
+	string headingText = Chars.modText(commentEntry.get_text(), type);
+	int lineWidth = headingText.length / 6;
+	if(type == 3){
+		headingText = "<!--\n" + headingText;
+	}
+	string versionText = "Version " + version;
+	if(versionText.length < (lineWidth - 4) && (type == 0 || type == 1)){
+		int versionTextLength = versionText.length;
+		for(int i = 0; i < lineWidth - 4 - versionTextLength; i++){
+			versionText = " " + versionText;
+		}
+	}else if(versionText.length < (lineWidth - 3) && type == 2){
+		int versionTextLength = versionText.length;
+		for(int i = 0; i < lineWidth - 3 - versionTextLength; i++){
+			versionText = " " + versionText;
+		}
+	}else if(versionText.length < (lineWidth - 2) && type == 3){
+		int versionTextLength = versionText.length;
+		for(int i = 0; i < lineWidth - 2 - versionTextLength; i++){
+			versionText = " " + versionText;
+		}
+	}
+	if(type == 0){
+		versionText = "//  " + versionText;
+	}else if(type == 1){
+		versionText = " *  " + versionText;
+	}else if(type == 2){
+		versionText = "#  " + versionText;
+	}else if(type == 3){
+		versionText = "  " + versionText;
+	}
+
+	string authorsText = authors;
+	int pos = 0;
+	int lineCounter = 1;
+	while(pos < authorsText.last_index_of_char('\n')){
+		pos = authorsText.index_of_char('\n', pos + 1);
+		lineCounter++;
+	}
+	string newAuthorsText = "";
+	pos = 0;
+	for(int i = 0; i < lineCounter; i++){
+		if(i != 0){
+			newAuthorsText = newAuthorsText + "\n";
+		}
+
+		string line = authorsText.substring(pos, authorsText.index_of_char('\n', pos) - pos);
+		if(line.length < (lineWidth - 4) && (type == 0 || type == 1)){
+			int lineLength = line.length;
+			for(int i2 = 0; i2 < lineWidth - 4 - lineLength; i2++){
+				line = " " + line;
+			}
+		}else if(line.length < (lineWidth - 3) && type == 2){
+			int lineLength = line.length;
+			for(int i2 = 0; i2 < lineWidth - 3 - lineLength; i2++){
+				line = " " + line;
+			}
+		}else if(line.length < (lineWidth - 2) && type == 3){
+			int lineLength = line.length;
+			for(int i2 = 0; i2 < lineWidth - 2 - lineLength; i2++){
+				line = " " + line;
+			}
+		}
+		if(type == 0){
+			newAuthorsText = newAuthorsText + "//  " + line;
+		}else if(type == 1){
+			newAuthorsText = newAuthorsText + " *  " + line;
+		}else if(type == 2){
+			newAuthorsText = newAuthorsText + "#  " + line;
+		}else if(type == 3){
+			newAuthorsText = newAuthorsText + "  " + line;
+		}
+		pos = authorsText.index_of_char('\n', pos) + 1;
+	}
+
+	string legalText = legal;
+	pos = 0;
+	lineCounter = 1;
+	while(pos < legalText.last_index_of_char('\n')){
+		pos = legalText.index_of_char('\n', pos + 1);
+		lineCounter++;
+	}
+	string newLegalText = "";
+	if(type == 0){
+		newLegalText = "// ";
+	}else if(type == 1){
+		newLegalText = " * ";
+	}else if(type == 2){
+		newLegalText = "# ";
+	}else if(type == 3){
+		newLegalText = " ";
+	}
+	if(type == 0 || type == 1){
+		for(int i = 0; i < lineWidth - 3; i++){
+			newLegalText = newLegalText + "=";
+		}
+	}else if(type == 2){
+		for(int i = 0; i < lineWidth - 2; i++){
+			newLegalText = newLegalText + "=";
+		}
+	}else if(type == 3){
+		for(int i = 0; i < lineWidth - 1; i++){
+			newLegalText = newLegalText + "=";
+		}
+	}
+	if(type == 0){
+		newLegalText = newLegalText + "\n//\n";
+	}else if(type == 1){
+		newLegalText = newLegalText + "\n *\n";
+	}else if(type == 2){
+		newLegalText = newLegalText + "\n#\n";
+	}else if(type == 3){
+		newLegalText = newLegalText + "\n  \n";
+	}
+	pos = 0;
+	for(int i = 0; i < lineCounter; i++){
+		if(i != 0){
+			newLegalText = newLegalText + "\n";
+		}
+
+		if(type == 0){
+			newLegalText = newLegalText + "//  " + legalText.substring(pos, legalText.index_of_char('\n', pos) - pos);
+		}else if(type == 1){
+			newLegalText = newLegalText + " *  " + legalText.substring(pos, legalText.index_of_char('\n', pos) - pos);
+		}else if(type == 2){
+			newLegalText = newLegalText + "#  " + legalText.substring(pos, legalText.index_of_char('\n', pos) - pos);
+		}else if(type == 3){
+			newLegalText = newLegalText + "  " + legalText.substring(pos, legalText.index_of_char('\n', pos) - pos);
+		}
+		pos = legalText.index_of_char('\n', pos) + 1;
+	}
+	if(type == 0){
+		newLegalText = newLegalText + "\n//\n// ";
+	}else if(type == 1){
+		newLegalText = newLegalText + "\n *\n * ";
+	}else if(type == 2){
+		newLegalText = newLegalText + "\n#\n# ";
+	}else if(type == 3){
+		newLegalText = newLegalText + "\n  \n ";
+	}
+	if(type == 0 || type == 1){
+		for(int i = 0; i < lineWidth - 3; i++){
+			newLegalText = newLegalText + "=";
+		}
+	}else if(type == 2){
+		for(int i = 0; i < lineWidth - 2; i++){
+			newLegalText = newLegalText + "=";
+		}
+	}else if(type == 3){
+		for(int i = 0; i < lineWidth - 1; i++){
+			newLegalText = newLegalText + "=";
+		}
+	}
+	
+	string footer = "";
+	if(showVersion == true){
+		footer = footer + "\n" + versionText + "\n";
+		if(type == 0){
+			footer = footer + "//";
+		}else if(type == 1){
+			footer = footer + " *";
+		}else if(type == 2){
+			footer = footer + "#";
+		}else if(type == 3){
+			footer = footer + "  ";
+		}
+	}
+	if(showAuthors == true){
+		footer = footer + "\n" + newAuthorsText + "\n";
+		if(type == 0){
+			footer = footer + "//";
+		}else if(type == 1){
+			footer = footer + " *";
+		}else if(type == 2){
+			footer = footer + "#";
+		}else if(type == 3){
+			footer = footer + "  ";
+		}
+	}
+	if(showLegal == true){
+		footer = footer + "\n" + newLegalText + "\n";
+		if(type == 0){
+			footer = footer + "//";
+		}else if(type == 1){
+			footer = footer + " *";
+		}else if(type == 2){
+			footer = footer + "#";
+		}else if(type == 3){
+			footer = footer + "  ";
+		}
+	}
+	if(type == 1){
+		footer = footer + "\n */";
+	}else if(type == 3){
+		footer = footer + "\n-->";
+	}
+	copyArea.buffer.text = headingText + footer;
+}
+
 void settingsPanel(){
 	var windowSettings = new Gtk.Window ();
 	windowSettings.title = "Settings";
@@ -159,6 +362,7 @@ void settingsPanel(){
 		authors = authorsBox.buffer.text;
 		legal = legalBox.buffer.text;
 		windowSettings.destroy();
+		updateMainArea();
 	});
 	layoutSettings.attach(saveButton, 0, 9, 2, 1);
 
@@ -185,13 +389,13 @@ int main (string[] args) {
 
 	var layout = new Gtk.Grid ();
 
-	var commentEntry = new Gtk.Entry();
+	commentEntry = new Gtk.Entry();
 	commentEntry.set_hexpand(true);
 	layout.attach (commentEntry, 0, 0, 2, 1);
 
 	var scrollArea = new Gtk.ScrolledWindow (null, null);
 	var mono_font = Pango.FontDescription.from_string("monospace");
-	var copyArea = new Gtk.TextView ();
+	copyArea = new Gtk.TextView ();
 	copyArea.set_editable(false);
 	copyArea.override_font(mono_font);
 	scrollArea.add (copyArea);
@@ -199,204 +403,8 @@ int main (string[] args) {
 	scrollArea.set_vexpand(true);
 	layout.attach (scrollArea, 0, 1, 2, 1);
 
-	commentEntry.activate.connect (() => {
-		string headingText = Chars.modText(commentEntry.get_text(), type);
-		int lineWidth = headingText.length / 6;
-		if(type == 3){
-			headingText = "<!--\n" + headingText;
-		}
-		string versionText = "Version " + version;
-		if(versionText.length < (lineWidth - 4) && (type == 0 || type == 1)){
-			int versionTextLength = versionText.length;
-			for(int i = 0; i < lineWidth - 4 - versionTextLength; i++){
-				versionText = " " + versionText;
-			}
-		}else if(versionText.length < (lineWidth - 3) && type == 2){
-			int versionTextLength = versionText.length;
-			for(int i = 0; i < lineWidth - 3 - versionTextLength; i++){
-				versionText = " " + versionText;
-			}
-		}else if(versionText.length < (lineWidth - 2) && type == 3){
-			int versionTextLength = versionText.length;
-			for(int i = 0; i < lineWidth - 2 - versionTextLength; i++){
-				versionText = " " + versionText;
-			}
-		}
-		if(type == 0){
-			versionText = "//  " + versionText;
-		}else if(type == 1){
-			versionText = " *  " + versionText;
-		}else if(type == 2){
-			versionText = "#  " + versionText;
-		}else if(type == 3){
-			versionText = "  " + versionText;
-		}
-
-		string authorsText = authors;
-		int pos = 0;
-		int lineCounter = 1;
-		while(pos < authorsText.last_index_of_char('\n')){
-			pos = authorsText.index_of_char('\n', pos + 1);
-			lineCounter++;
-		}
-		string newAuthorsText = "";
-		pos = 0;
-		for(int i = 0; i < lineCounter; i++){
-			if(i != 0){
-				newAuthorsText = newAuthorsText + "\n";
-			}
-
-			string line = authorsText.substring(pos, authorsText.index_of_char('\n', pos) - pos);
-			if(line.length < (lineWidth - 4) && (type == 0 || type == 1)){
-				int lineLength = line.length;
-				for(int i2 = 0; i2 < lineWidth - 4 - lineLength; i2++){
-					line = " " + line;
-				}
-			}else if(line.length < (lineWidth - 3) && type == 2){
-				int lineLength = line.length;
-				for(int i2 = 0; i2 < lineWidth - 3 - lineLength; i2++){
-					line = " " + line;
-				}
-			}else if(line.length < (lineWidth - 2) && type == 3){
-				int lineLength = line.length;
-				for(int i2 = 0; i2 < lineWidth - 2 - lineLength; i2++){
-					line = " " + line;
-				}
-			}
-			if(type == 0){
-				newAuthorsText = newAuthorsText + "//  " + line;
-			}else if(type == 1){
-				newAuthorsText = newAuthorsText + " *  " + line;
-			}else if(type == 2){
-				newAuthorsText = newAuthorsText + "#  " + line;
-			}else if(type == 3){
-				newAuthorsText = newAuthorsText + "  " + line;
-			}
-			pos = authorsText.index_of_char('\n', pos) + 1;
-		}
-
-		string legalText = legal;
-		pos = 0;
-		lineCounter = 1;
-		while(pos < legalText.last_index_of_char('\n')){
-			pos = legalText.index_of_char('\n', pos + 1);
-			lineCounter++;
-		}
-		string newLegalText = "";
-		if(type == 0){
-			newLegalText = "// ";
-		}else if(type == 1){
-			newLegalText = " * ";
-		}else if(type == 2){
-			newLegalText = "# ";
-		}else if(type == 3){
-			newLegalText = " ";
-		}
-		if(type == 0 || type == 1){
-			for(int i = 0; i < lineWidth - 3; i++){
-				newLegalText = newLegalText + "=";
-			}
-		}else if(type == 2){
-			for(int i = 0; i < lineWidth - 2; i++){
-				newLegalText = newLegalText + "=";
-			}
-		}else if(type == 3){
-			for(int i = 0; i < lineWidth - 1; i++){
-				newLegalText = newLegalText + "=";
-			}
-		}
-		if(type == 0){
-			newLegalText = newLegalText + "\n//\n";
-		}else if(type == 1){
-			newLegalText = newLegalText + "\n *\n";
-		}else if(type == 2){
-			newLegalText = newLegalText + "\n#\n";
-		}else if(type == 3){
-			newLegalText = newLegalText + "\n  \n";
-		}
-		pos = 0;
-		for(int i = 0; i < lineCounter; i++){
-			if(i != 0){
-				newLegalText = newLegalText + "\n";
-			}
-
-			if(type == 0){
-				newLegalText = newLegalText + "//  " + legalText.substring(pos, legalText.index_of_char('\n', pos) - pos);
-			}else if(type == 1){
-				newLegalText = newLegalText + " *  " + legalText.substring(pos, legalText.index_of_char('\n', pos) - pos);
-			}else if(type == 2){
-				newLegalText = newLegalText + "#  " + legalText.substring(pos, legalText.index_of_char('\n', pos) - pos);
-			}else if(type == 3){
-				newLegalText = newLegalText + "  " + legalText.substring(pos, legalText.index_of_char('\n', pos) - pos);
-			}
-			pos = legalText.index_of_char('\n', pos) + 1;
-		}
-		if(type == 0){
-			newLegalText = newLegalText + "\n//\n// ";
-		}else if(type == 1){
-			newLegalText = newLegalText + "\n *\n * ";
-		}else if(type == 2){
-			newLegalText = newLegalText + "\n#\n# ";
-		}else if(type == 3){
-			newLegalText = newLegalText + "\n  \n ";
-		}
-		if(type == 0 || type == 1){
-			for(int i = 0; i < lineWidth - 3; i++){
-				newLegalText = newLegalText + "=";
-			}
-		}else if(type == 2){
-			for(int i = 0; i < lineWidth - 2; i++){
-				newLegalText = newLegalText + "=";
-			}
-		}else if(type == 3){
-			for(int i = 0; i < lineWidth - 1; i++){
-				newLegalText = newLegalText + "=";
-			}
-		}
-
-		string footer = "";
-		if(showVersion == true){
-			footer = footer + "\n" + versionText + "\n";
-			if(type == 0){
-				footer = footer + "//";
-			}else if(type == 1){
-				footer = footer + " *";
-			}else if(type == 2){
-				footer = footer + "#";
-			}else if(type == 3){
-				footer = footer + "  ";
-			}
-		}
-		if(showAuthors == true){
-			footer = footer + "\n" + newAuthorsText + "\n";
-			if(type == 0){
-				footer = footer + "//";
-			}else if(type == 1){
-				footer = footer + " *";
-			}else if(type == 2){
-				footer = footer + "#";
-			}else if(type == 3){
-				footer = footer + "  ";
-			}
-		}
-		if(showLegal == true){
-			footer = footer + "\n" + newLegalText + "\n";
-			if(type == 0){
-				footer = footer + "//";
-			}else if(type == 1){
-				footer = footer + " *";
-			}else if(type == 2){
-				footer = footer + "#";
-			}else if(type == 3){
-				footer = footer + "  ";
-			}
-		}
-		if(type == 1){
-			footer = footer + "\n */";
-		}else if(type == 3){
-			footer = footer + "\n-->";
-		}
-		copyArea.buffer.text = headingText + footer;
+	commentEntry.changed.connect (() => {
+		updateMainArea();
 	});
 
 	var copyBtn = new Gtk.Button.with_label ("Copy Comment");
