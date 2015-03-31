@@ -4,7 +4,7 @@
 //  |   --| . |     |     | -_|   |  _|  |  |  | -_|   | -_|  _| .'|  _| . |  _|
 //  |_____|___|_|_|_|_|_|_|___|_|_|_|    |_____|___|_|_|___|_| |__,|_| |___|_|  
 //                                                                              
-//                                                                 Version 0.2.5
+//                                                                 Version 0.2.6
 //
 //                                       Jeremy Vaartjes <me@jeremyvaartjes.com>
 //
@@ -49,6 +49,10 @@ public class Chars{
 		}else if(type == 3){
 			for(int i = 0; i < 6; i++){
 				lines[i] = "  ";
+			}
+		}else if(type == 4){
+			for(int i = 0; i < 6; i++){
+				lines[i] = ";  ";
 			}
 		}
 		

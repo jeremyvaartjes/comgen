@@ -4,7 +4,7 @@
 //  |   --| . |     |     | -_|   |  _|  |  |  | -_|   | -_|  _| .'|  _| . |  _|
 //  |_____|___|_|_|_|_|_|_|___|_|_|_|    |_____|___|_|_|___|_| |__,|_| |___|_|  
 //                                                                              
-//                                                                 Version 0.2.5
+//                                                                 Version 0.2.6
 //
 //                                       Jeremy Vaartjes <me@jeremyvaartjes.com>
 //
@@ -53,7 +53,7 @@ void updateMainArea(){
 		for(int i = 0; i < lineWidth - 4 - versionTextLength; i++){
 			versionText = " " + versionText;
 		}
-	}else if(versionText.length < (lineWidth - 3) && type == 2){
+	}else if(versionText.length < (lineWidth - 3) && (type == 2 || type == 4)){
 		int versionTextLength = versionText.length;
 		for(int i = 0; i < lineWidth - 3 - versionTextLength; i++){
 			versionText = " " + versionText;
@@ -72,6 +72,8 @@ void updateMainArea(){
 		versionText = "#  " + versionText;
 	}else if(type == 3){
 		versionText = "  " + versionText;
+	}else if(type == 4){
+		versionText = ";  " + versionText;
 	}
 
 	string authorsText = authors;
@@ -94,7 +96,7 @@ void updateMainArea(){
 			for(int i2 = 0; i2 < lineWidth - 4 - lineLength; i2++){
 				line = " " + line;
 			}
-		}else if(line.length < (lineWidth - 3) && type == 2){
+		}else if(line.length < (lineWidth - 3) && (type == 2 || type == 4)){
 			int lineLength = line.length;
 			for(int i2 = 0; i2 < lineWidth - 3 - lineLength; i2++){
 				line = " " + line;
@@ -113,6 +115,8 @@ void updateMainArea(){
 			newAuthorsText = newAuthorsText + "#  " + line;
 		}else if(type == 3){
 			newAuthorsText = newAuthorsText + "  " + line;
+		}else if(type == 4){
+			newAuthorsText = newAuthorsText + ";  " + line;
 		}
 		pos = authorsText.index_of_char('\n', pos) + 1;
 	}
@@ -133,12 +137,14 @@ void updateMainArea(){
 		newLegalText = "# ";
 	}else if(type == 3){
 		newLegalText = " ";
+	}else if(type == 4){
+		newLegalText = "; ";
 	}
 	if(type == 0 || type == 1){
 		for(int i = 0; i < lineWidth - 3; i++){
 			newLegalText = newLegalText + "=";
 		}
-	}else if(type == 2){
+	}else if(type == 2 || type == 4){
 		for(int i = 0; i < lineWidth - 2; i++){
 			newLegalText = newLegalText + "=";
 		}
@@ -155,6 +161,8 @@ void updateMainArea(){
 		newLegalText = newLegalText + "\n#\n";
 	}else if(type == 3){
 		newLegalText = newLegalText + "\n  \n";
+	}else if(type == 4){
+		newLegalText = newLegalText + "\n;\n";
 	}
 	pos = 0;
 	for(int i = 0; i < lineCounter; i++){
@@ -170,6 +178,8 @@ void updateMainArea(){
 			newLegalText = newLegalText + "#  " + legalText.substring(pos, legalText.index_of_char('\n', pos) - pos);
 		}else if(type == 3){
 			newLegalText = newLegalText + "  " + legalText.substring(pos, legalText.index_of_char('\n', pos) - pos);
+		}else if(type == 4){
+			newLegalText = newLegalText + ";  " + legalText.substring(pos, legalText.index_of_char('\n', pos) - pos);
 		}
 		pos = legalText.index_of_char('\n', pos) + 1;
 	}
@@ -181,12 +191,14 @@ void updateMainArea(){
 		newLegalText = newLegalText + "\n#\n# ";
 	}else if(type == 3){
 		newLegalText = newLegalText + "\n  \n ";
+	}else if(type == 4){
+		newLegalText = newLegalText + "\n;\n; ";
 	}
 	if(type == 0 || type == 1){
 		for(int i = 0; i < lineWidth - 3; i++){
 			newLegalText = newLegalText + "=";
 		}
-	}else if(type == 2){
+	}else if(type == 2 || type == 4){
 		for(int i = 0; i < lineWidth - 2; i++){
 			newLegalText = newLegalText + "=";
 		}
@@ -207,6 +219,8 @@ void updateMainArea(){
 			footer = footer + "#";
 		}else if(type == 3){
 			footer = footer + "  ";
+		}else if(type == 4){
+			footer = footer + ";";
 		}
 	}
 	if(showAuthors == true){
@@ -219,6 +233,8 @@ void updateMainArea(){
 			footer = footer + "#";
 		}else if(type == 3){
 			footer = footer + "  ";
+		}else if(type == 4){
+			footer = footer + ";";
 		}
 	}
 	if(showLegal == true){
@@ -231,6 +247,8 @@ void updateMainArea(){
 			footer = footer + "#";
 		}else if(type == 3){
 			footer = footer + "  ";
+		}else if(type == 4){
+			footer = footer + ";";
 		}
 	}
 	if(type == 1){
@@ -259,6 +277,7 @@ void settingsPanel(){
 	typeCombo.append_text("/* C style */");
 	typeCombo.append_text("# Bash style");
 	typeCombo.append_text("<!-- HTML style -->");
+	typeCombo.append_text("; Assembly style");
 	typeCombo.active = type;
 	layoutSettings.attach (typeLabel, 0, 0, 1, 1);
 	layoutSettings.attach (typeCombo, 1, 0, 1, 1);
