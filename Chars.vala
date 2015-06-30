@@ -1,9 +1,9 @@
-//                                                                              
-//   _____                         _      _____                     _           
-//  |     |___ _____ _____ ___ ___| |_   |   __|___ ___ ___ ___ ___| |_ ___ ___ 
+//
+//   _____                         _      _____                     _
+//  |     |___ _____ _____ ___ ___| |_   |   __|___ ___ ___ ___ ___| |_ ___ ___
 //  |   --| . |     |     | -_|   |  _|  |  |  | -_|   | -_|  _| .'|  _| . |  _|
-//  |_____|___|_|_|_|_|_|_|___|_|_|_|    |_____|___|_|_|___|_| |__,|_| |___|_|  
-//                                                                              
+//  |_____|___|_|_|_|_|_|_|___|_|_|_|    |_____|___|_|_|___|_| |__,|_| |___|_|
+//
 //                                                                 Version 0.2.6
 //
 //                                       Jeremy Vaartjes <me@jeremyvaartjes.com>
@@ -12,17 +12,17 @@
 //
 //  Comment Generator: generate styled comments for your code.
 //  Copyright (C) 2014 Jeremy Vaartjes <me@jeremyvaartjes.com>
-//  
+//
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
 //  the Free Software Foundation, either version 3 of the License, or
 //  (at your option) any later version.
-//  
+//
 //  This program is distributed in the hope that it will be useful,
 //  but WITHOUT ANY WARRANTY; without even the implied warranty of
 //  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 //  GNU General Public License for more details.
-//  
+//
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
@@ -31,7 +31,6 @@
 
 public class Chars{
 	public static string modText(string text, int type){
-		
 		string lines[6];
 		if(type == 0){
 			for(int i = 0; i < 6; i++){
@@ -55,7 +54,6 @@ public class Chars{
 				lines[i] = ";  ";
 			}
 		}
-		
 
 		for(var i = 0; i < text.length; i++){
 			switch(text[i]){
@@ -1015,18 +1013,12 @@ public class Chars{
 						string temp = lines[2].substring(0, lines[2].length - 1);
 						temp = temp + "|";
 						lines[2] = temp;
-						temp = lines[3].substring(0, lines[3].length - 1);
-						temp = temp + "|";
-						lines[3] = temp;
-						temp = lines[4].substring(0, lines[4].length - 1);
-						temp = temp + "|";
-						lines[4] = temp;
 					}else{
 						lines[0] = lines[0] + " ";
 						lines[1] = lines[1] + " ";
 						lines[2] = lines[2] + "|";
-						lines[3] = lines[3] + "|";
-						lines[4] = lines[4] + "|";
+						lines[3] = lines[3] + " ";
+						lines[4] = lines[4] + " ";
 						lines[5] = lines[5] + " ";
 					}
 
