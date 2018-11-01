@@ -1,3 +1,5 @@
+![Comgen Icon](https://raw.githubusercontent.com/jeremyvaartjes/comgen/master/comgen.png)
+
 comgen
 ======
 
