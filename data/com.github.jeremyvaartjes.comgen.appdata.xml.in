@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2018 Jeremy Vaartjes <jeremy@vaartj.es> -->
+<component type="desktop">
+  <id>com.github.jeremyvaartjes.comgen</id>
+  <metadata_license>CC0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
+  <name>Comgen</name>
+  <summary>Comment Generator: generate styled comments for your code.</summary>
+  <description>
+    <p>For a plain heading, just type in some text and an ascii-art styled heading comment will be produced.</p>
+    <p>If you click on the settings button you can add things like version number, code authors and copyright information. In settings you can now also change what comment style is used (ie: C++, C, Bash, HTML).</p>
+  </description>
+   <provides>
+    <binary>com.github.jeremyvaartjes.comgen</binary>
+  </provides>
+  
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/jeremyvaartjes/comgen/master/data/screenshot.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/jeremyvaartjes/comgen/master/data/screenshot-2.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/jeremyvaartjes/comgen/master/data/screenshot-3.png</image>
+    </screenshot>
+  </screenshots>
+
+  <content_rating type="oars-1.1">
+    <content_attribute id="violence-cartoon">none</content_attribute>
+    <content_attribute id="violence-fantasy">none</content_attribute>
+    <content_attribute id="violence-realistic">none</content_attribute>
+    <content_attribute id="violence-bloodshed">none</content_attribute>
+    <content_attribute id="violence-sexual">none</content_attribute>
+    <content_attribute id="violence-desecration">none</content_attribute>
+    <content_attribute id="violence-slavery">none</content_attribute>
+    <content_attribute id="violence-worship">none</content_attribute>
+    <content_attribute id="drugs-alcohol">none</content_attribute>
+    <content_attribute id="drugs-narcotics">none</content_attribute>
+    <content_attribute id="drugs-tobacco">none</content_attribute>
+    <content_attribute id="sex-nudity">none</content_attribute>
+    <content_attribute id="sex-themes">none</content_attribute>
+    <content_attribute id="sex-homosexuality">none</content_attribute>
+    <content_attribute id="sex-prostitution">none</content_attribute>
+    <content_attribute id="sex-adultery">none</content_attribute>
+    <content_attribute id="sex-appearance">none</content_attribute>
+    <content_attribute id="language-profanity">none</content_attribute>
+    <content_attribute id="language-humor">none</content_attribute>
+    <content_attribute id="language-discrimination">none</content_attribute>
+    <content_attribute id="social-chat">none</content_attribute>
+    <content_attribute id="social-info">none</content_attribute>
+    <content_attribute id="social-audio">none</content_attribute>
+    <content_attribute id="social-location">none</content_attribute>
+    <content_attribute id="social-contacts">none</content_attribute>
+    <content_attribute id="money-purchasing">none</content_attribute>
+    <content_attribute id="money-gambling">none</content_attribute>
+  </content_rating>
+
+  <developer_name>Jeremy Vaartjes</developer_name>
+  <url type="homepage">https://jeremy.vaartj.es</url>
+  <url type="bugtracker">https://github.com/jeremyvaartjes/comgen/issues</url>
+  <url type="translate">https://github.com/jeremyvaartjes/comgen/tree/master/po#readme</url>
+
+  <custom>
+    <value key="x-appcenter-color-primary">#ffffe1</value>
+    <value key="x-appcenter-color-primary-text">#747a68</value>
+  </custom>
+
+</component>

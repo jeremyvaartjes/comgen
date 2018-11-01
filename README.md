@@ -3,9 +3,7 @@ comgen
 
 Comment Generator: generate styled comments for your code.
 
-How to build it
-===============
-just run make
+![comgen Screenshot](https://raw.githubusercontent.com/jeremyvaartjes/comgen/master/data/screenshot-3.png)
 
 How to use it
 =============
@@ -14,13 +12,26 @@ For a plain heading, just type in some text and an ascii-art styled heading comm
 If you click on the settings button you can add things like version number, code authors and copyright information.
 In settings you can now also change what comment style is used (ie: C++, C, Bash, HTML).
 
-More features are to come.
+Developing and Building
+=======================
 
-Requirements
-============
-This program has the following dependencies:
+If you want to hack on and build Comgen yourself, you'll need the following dependencies:
 
- - GTK+-3.0
- - Valac
+* libgtk-3-dev
+* meson
+* valac
 
-Any system with these on it should be able to run it.
+Run `meson build` to configure the build environment and run `ninja test` to build and run automated tests
+
+```
+meson build --prefix=/usr
+cd build
+ninja test
+```
+
+To install, use `ninja install`, then execute with `com.github.jeremyvaartjes.comgen`
+
+```
+sudo ninja install
+com.github.jeremyvaartjes.comgen
+```

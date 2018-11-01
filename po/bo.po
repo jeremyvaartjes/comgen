@@ -1,0 +1,56 @@
+# Tibetan translations for com.github.jeremyvaartjes.comgen package.
+# Copyright (C) 2018 THE com.github.jeremyvaartjes.comgen'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.jeremyvaartjes.comgen package.
+# Automatically generated, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.jeremyvaartjes.comgen\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-01 12:25+1100\n"
+"PO-Revision-Date: 2018-11-01 12:25+1100\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: bo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ASCII\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/com.github.jeremyvaartjes.comgen.desktop.in:3
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:7
+msgid "Comgen"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.desktop.in:4
+msgid "Comment Generator"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.desktop.in:5
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:8
+msgid "Comment Generator: generate styled comments for your code."
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.desktop.in:8
+msgid "com.github.jeremyvaartjes.comgen"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.desktop.in:11
+msgid "comgen;Comment;Generator;"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:10
+msgid ""
+"For a plain heading, just type in some text and an ascii-art styled heading "
+"comment will be produced."
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:11
+msgid ""
+"If you click on the settings button you can add things like version number, "
+"code authors and copyright information. In settings you can now also change "
+"what comment style is used (ie: C++, C, Bash, HTML)."
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:59
+msgid "Jeremy Vaartjes"
+msgstr ""
