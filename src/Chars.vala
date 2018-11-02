@@ -4,14 +4,14 @@
 //  |   --| . |     |     | -_|   |  _|  |  |  | -_|   | -_|  _| .'|  _| . |  _|
 //  |_____|___|_|_|_|_|_|_|___|_|_|_|    |_____|___|_|_|___|_| |__,|_| |___|_|
 //
-//                                                                 Version 0.2.6
+//                                                                 Version 0.2.7
 //
 //                                       Jeremy Vaartjes <me@jeremyvaartjes.com>
 //
 // =============================================================================
 //
 //  Comment Generator: generate styled comments for your code.
-//  Copyright (C) 2014 Jeremy Vaartjes <me@jeremyvaartjes.com>
+//  Copyright (C) 2018 Jeremy Vaartjes <jeremy@vaartj.es>
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by

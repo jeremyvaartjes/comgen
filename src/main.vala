@@ -4,14 +4,14 @@
 //  |   --| . |     |     | -_|   |  _|  |  |  | -_|   | -_|  _| .'|  _| . |  _|
 //  |_____|___|_|_|_|_|_|_|___|_|_|_|    |_____|___|_|_|___|_| |__,|_| |___|_|  
 //                                                                              
-//                                                                 Version 0.2.6
+//                                                                 Version 0.2.7
 //
 //                                       Jeremy Vaartjes <me@jeremyvaartjes.com>
 //
 // =============================================================================
 //
 //  Comment Generator: generate styled comments for your code.
-//  Copyright (C) 2014 Jeremy Vaartjes <me@jeremyvaartjes.com>
+//  Copyright (C) 2018 Jeremy Vaartjes <jeremy@vaartj.es>
 //  
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -261,7 +261,7 @@ void updateMainArea(){
 
 void settingsPanel(){
 	var windowSettings = new Gtk.Window ();
-	windowSettings.title = "Settings";
+	windowSettings.title = _("Settings");
 	windowSettings.set_border_width (12);
 	windowSettings.set_position (Gtk.WindowPosition.CENTER);
 	windowSettings.set_modal(true);
@@ -271,7 +271,7 @@ void settingsPanel(){
 	var layoutSettings = new Gtk.Grid ();
 	layoutSettings.set_row_spacing(8);
 
-	var typeLabel = new Gtk.Label("Comment type ");
+	var typeLabel = new Gtk.Label(_("Comment type "));
 	var typeCombo = new Gtk.ComboBoxText();
 	typeCombo.append_text("// C++ style");
 	typeCombo.append_text("/* C style */");
@@ -283,7 +283,7 @@ void settingsPanel(){
 	layoutSettings.attach (typeCombo, 1, 0, 1, 1);
 
 	var versionEntry = new Gtk.Entry();
-	var versionCheck = new Gtk.CheckButton.with_label ("Show Version Text");
+	var versionCheck = new Gtk.CheckButton.with_label (_("Show Version Text"));
 	versionCheck.toggled.connect (() => {
 		if(versionCheck.active){
 			versionEntry.set_sensitive(true);
@@ -293,7 +293,7 @@ void settingsPanel(){
 	});
 	layoutSettings.attach (versionCheck, 0, 1, 2, 1);
 
-	var versionLabel = new Gtk.Label("Version");
+	var versionLabel = new Gtk.Label(_("Version"));
 	versionEntry.set_text(version);
 	versionEntry.set_hexpand(true);
 	layoutSettings.attach (versionLabel, 0, 2, 1, 1);
@@ -306,7 +306,7 @@ void settingsPanel(){
 	}
 
 	var authorsBox = new Gtk.TextView();
-	var authorsCheck = new Gtk.CheckButton.with_label ("Show Authors");
+	var authorsCheck = new Gtk.CheckButton.with_label (_("Show Authors"));
 	authorsCheck.toggled.connect (() => {
 		if(authorsCheck.active){
 			authorsBox.set_sensitive(true);
@@ -316,7 +316,7 @@ void settingsPanel(){
 	});
 	layoutSettings.attach (authorsCheck, 0, 3, 2, 1);
 
-	var authorsLabel = new Gtk.Label("Authors");
+	var authorsLabel = new Gtk.Label(_("Authors"));
 	authorsBox.buffer.text = authors;
 	var scrollAreaAuth = new Gtk.ScrolledWindow (null, null);
 	scrollAreaAuth.add(authorsBox);
@@ -332,7 +332,7 @@ void settingsPanel(){
 	}
 
 	var legalBox = new Gtk.TextView();
-	var legalCheck = new Gtk.CheckButton.with_label ("Show Legal Info");
+	var legalCheck = new Gtk.CheckButton.with_label (_("Show Legal Info"));
 	legalCheck.toggled.connect (() => {
 		if(legalCheck.active){
 			legalBox.set_sensitive(true);
@@ -342,7 +342,7 @@ void settingsPanel(){
 	});
 	layoutSettings.attach (legalCheck, 0, 6, 2, 1);
 
-	var legalLabel = new Gtk.Label("Legal Info");
+	var legalLabel = new Gtk.Label(_("Legal Info"));
 	legalLabel.set_hexpand(true);
 	legalLabel.set_justify(Gtk.Justification.LEFT);
 	legalBox.buffer.text = legal;
@@ -393,15 +393,15 @@ int main (string[] args) {
 	type = 0;
 	version = "0.0.1";
 	showVersion = false;
-	authors = "John Doe <john.doe@gmail.com>";
+	authors = _("John Doe <john.doe@gmail.com>");
 	showAuthors = false;
-	legal = "Copyright YYYY John Doe";
+	legal = _("Copyright YYYY John Doe");
 	showLegal = false;
 
 	Gtk.init (ref args);
 
 	window = new Gtk.Window ();
-	window.title = "Comment Generator";
+	window.title = _("Comment Generator");
 	window.set_position (Gtk.WindowPosition.CENTER);
 	window.set_default_size (520, 340);
 	window.destroy.connect (Gtk.main_quit);
@@ -426,7 +426,7 @@ int main (string[] args) {
 		updateMainArea();
 	});
 
-	var copyBtn = new Gtk.Button.with_label ("Copy Comment");
+	var copyBtn = new Gtk.Button.with_label (_("Copy Comment"));
 	copyBtn.set_hexpand(true);
 	copyBtn.clicked.connect (() => {
 		var display = window.get_display ();

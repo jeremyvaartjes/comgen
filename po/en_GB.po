@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.jeremyvaartjes.comgen\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-01 12:25+1100\n"
-"PO-Revision-Date: 2018-11-01 12:25+1100\n"
+"POT-Creation-Date: 2018-11-03 09:32+1100\n"
+"PO-Revision-Date: 2018-11-03 09:32+1100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: en_GB\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Comgen"
 msgstr "Comgen"
 
-#: data/com.github.jeremyvaartjes.comgen.desktop.in:4
+#: data/com.github.jeremyvaartjes.comgen.desktop.in:4 src/main.vala:404
 msgid "Comment Generator"
 msgstr "Comment Generator"
 
@@ -60,3 +60,47 @@ msgstr ""
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:59
 msgid "Jeremy Vaartjes"
 msgstr "Jeremy Vaartjes"
+
+#: src/main.vala:264
+msgid "Settings"
+msgstr "Settings"
+
+#: src/main.vala:274
+msgid "Comment type "
+msgstr "Comment type "
+
+#: src/main.vala:286
+msgid "Show Version Text"
+msgstr "Show Version Text"
+
+#: src/main.vala:296
+msgid "Version"
+msgstr "Version"
+
+#: src/main.vala:309
+msgid "Show Authors"
+msgstr "Show Authors"
+
+#: src/main.vala:319
+msgid "Authors"
+msgstr "Authors"
+
+#: src/main.vala:335
+msgid "Show Legal Info"
+msgstr "Show Legal Info"
+
+#: src/main.vala:345
+msgid "Legal Info"
+msgstr "Legal Info"
+
+#: src/main.vala:396
+msgid "John Doe <john.doe@gmail.com>"
+msgstr "John Doe <john.doe@gmail.com>"
+
+#: src/main.vala:398
+msgid "Copyright YYYY John Doe"
+msgstr "Copyright YYYY John Doe"
+
+#: src/main.vala:429
+msgid "Copy Comment"
+msgstr "Copy Comment"
