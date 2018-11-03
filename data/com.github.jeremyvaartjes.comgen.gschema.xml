@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <enum id="com.github.jeremyvaartjes.comgen.CommentStyle">
+    <value nick="CPP" value="0" />
+    <value nick="CC" value="1" />
+    <value nick="BASH" value="2" />
+    <value nick="HTML" value="3" />
+    <value nick="ASSEMBLY" value="4" />
+    <value nick="MYSQL" value="5" />
+    <value nick="LUA" value="6" />
+    <value nick="VISUALBASIC" value="7" />
+    <value nick="PLAIN" value="8" />
+  </enum>
+  <schema path="/com/github/jeremyvaartjes/comgen/settings/" id="com.github.jeremyvaartjes.comgen.settings" gettext-domain="com.github.jeremyvaartjes.comgen">
+    <key name="comment-type" enum="com.github.jeremyvaartjes.comgen.CommentStyle">
+      <default>"CPP"</default>
+      <summary>Comment Style</summary>
+      <description>The style of comment to use in the output.</description>
+    </key>
+    <key name="version" type="s">
+      <default>'0.0.1'</default>
+      <summary>Version Text</summary>
+      <description>The version text to use on launch.</description>
+    </key>
+    <key name="show-version" type="b">
+      <default>false</default>
+      <summary>Show Version</summary>
+      <description>Generate and show version text in the output.</description>
+    </key>
+    <key name="authors" type="s">
+      <default>'John Doe &lt;john.doe@gmail.com&gt;'</default>
+      <summary>Author Text</summary>
+      <description>The author text to use on launch.</description>
+    </key>
+    <key name="show-authors" type="b">
+      <default>false</default>
+      <summary>Show Authors</summary>
+      <description>Generate and show author text in the output.</description>
+    </key>
+    <key name="legal" type="s">
+      <default>'Copyright YYYY John Doe'</default>
+      <summary>Legal Text</summary>
+      <description>The legal text to use on launch.</description>
+    </key>
+    <key name="show-legal" type="b">
+      <default>false</default>
+      <summary>Show Legal</summary>
+      <description>Generate and show legal text in the output.</description>
+    </key>
+    <key name="main-text" type="s">
+      <default>'Comment Generator'</default>
+      <summary>Header Text</summary>
+      <description>This is the text to be converted into the ASCII art header on launch.</description>
+    </key>
+  </schema>
+</schemalist>
