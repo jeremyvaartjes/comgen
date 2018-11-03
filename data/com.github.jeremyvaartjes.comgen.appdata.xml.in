@@ -7,8 +7,18 @@
   <name>Comgen</name>
   <summary>Comment Generator: generate styled comments for your code.</summary>
   <description>
-    <p>For a plain heading, just type in some text and an ascii-art styled heading comment will be produced.</p>
-    <p>If you click on the settings button you can add things like version number, code authors and copyright information. In settings you can now also change what comment style is used (ie: C++, C, Bash, HTML).</p>
+    <p>Comment Generator will let you create a header block that can include elements like an ascii art title, version number, authors and copyright information.</p>
+    <p>Currently the following comment styles are available for use:</p>
+    <ul>
+      <li>// C++</li>
+      <li>/* C */</li>
+      <li># Bash</li>
+      <li>&lt;!-- HTML --&gt;</li>
+      <li>; Assembly</li>
+      <li>-- MySQL</li>
+      <li>--[[ Lua --]]</li>
+      <li>' Visual Basic</li>
+    </ul>
   </description>
    <provides>
     <binary>com.github.jeremyvaartjes.comgen</binary>
@@ -64,6 +74,7 @@
   <custom>
     <value key="x-appcenter-color-primary">#ffffe1</value>
     <value key="x-appcenter-color-primary-text">#747a68</value>
+    <value key="x-appcenter-suggested-price">1</value>
   </custom>
 
 </component>

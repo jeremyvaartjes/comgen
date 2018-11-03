@@ -1,3 +1,13 @@
+com.github.jeremyvaartjes.comgen (1.0.0) bionic; urgency=medium
+
+  * Data is now auto-saved
+  * Updated interface into a single window
+  * Added more comment styles
+  * You can now import license text for a few open-source licenses
+  * Miscellaneous fixes
+
+ -- Jeremy Vaartjes <jeremy@vaartj.es>  Sun, 04 Nov 2018 00:13:25 +1100
+
 com.github.jeremyvaartjes.comgen (0.2.6) bionic; urgency=medium
 
   * Initial Release.
