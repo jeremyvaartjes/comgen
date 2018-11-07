@@ -5,6 +5,8 @@ comgen
 
 Comment Generator: generate styled comments for your code.
 
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.jeremyvaartjes.comgen)﻿
+
 ![comgen Screenshot](https://raw.githubusercontent.com/jeremyvaartjes/comgen/master/data/screenshot-3.png)
 
 How to use it
