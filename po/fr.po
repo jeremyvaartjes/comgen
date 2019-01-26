@@ -1,49 +1,51 @@
 # French translations for com.github.jeremyvaartjes.comgen package.
-# Copyright (C) 2018 THE com.github.jeremyvaartjes.comgen'S COPYRIGHT HOLDER
+# Copyright (C) 2019 THE com.github.jeremyvaartjes.comgen'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.jeremyvaartjes.comgen package.
-# Automatically generated, 2018.
+# Automatically generated, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.jeremyvaartjes.comgen\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-11-03 23:43+1100\n"
-"PO-Revision-Date: 2018-11-03 09:32+1100\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2019-01-26 22:50+0100\n"
+"Last-Translator: NathanBnm\n"
+"Language-Team: Français\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: data/com.github.jeremyvaartjes.comgen.desktop.in:3
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:7
 msgid "Comgen"
-msgstr ""
+msgstr "Comgen"
 
 #: data/com.github.jeremyvaartjes.comgen.desktop.in:4 src/MainWindow.vala:103
 msgid "Comment Generator"
-msgstr ""
+msgstr "Générateur de commentaires"
 
 #: data/com.github.jeremyvaartjes.comgen.desktop.in:5
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:8
 msgid "Comment Generator: generate styled comments for your code."
-msgstr ""
+msgstr "Générateur de commentaires : générez des commentaires stylisés pour votre code."
 
 #: data/com.github.jeremyvaartjes.comgen.desktop.in:8
 msgid "com.github.jeremyvaartjes.comgen"
-msgstr ""
+msgstr "com.github.jeremyvaartjes.comgen"
 
 #: data/com.github.jeremyvaartjes.comgen.desktop.in:11
 msgid "comgen;Comment;Generator;"
-msgstr ""
+msgstr "comgen;Commentaire;Générateur;"
 
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:10
 msgid ""
 "For a plain heading, just type in some text and an ascii-art styled heading "
 "comment will be produced."
 msgstr ""
+"Pour un titre simple, il suffit de taper un peu de texte et un commentaire de titre "
+"stylisé en ASCII sera produit."
 
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:11
 msgid ""
@@ -51,10 +53,13 @@ msgid ""
 "code authors and copyright information. In settings you can now also change "
 "what comment style is used (ie: C++, C, Bash, HTML)."
 msgstr ""
+"Si vous cliquez sur le bouton paramètres, vous pouvez ajouter des éléments tels que le numéro de version, "
+"les auteurs du code et les informations de copyright. Dans les paramètres, vous pouvez également modifier "
+"le style de commentaire utilisé (ex : C, C++, Bash, HTML)."
 
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:59
 msgid "Jeremy Vaartjes"
-msgstr ""
+msgstr "Jeremy Vaartjes"
 
 #: src/MainWindow.vala:33
 msgid ""
@@ -73,6 +78,20 @@ msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program.  If not, see <https://www.gnu.org/licenses/>."
 msgstr ""
+"Copyright (C) [aaaa] [nom du titulaire du copyright]\n"
+"\n"
+"This program is free software: you can redistribute it and/or modify\n"
+"it under the terms of the GNU General Public License as published by\n"
+"the Free Software Foundation, either version 2 of the License, or\n"
+"(at your option) any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful,\n"
+"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
+"GNU General Public License for more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License\n"
+"along with this program.  If not, see <https://www.gnu.org/licenses/>."
 
 #: src/MainWindow.vala:34
 msgid ""
@@ -91,6 +110,20 @@ msgid ""
 "You should have received a copy of the GNU General Public License\n"
 "along with this program.  If not, see <https://www.gnu.org/licenses/>."
 msgstr ""
+"Copyright (C) [aaaa] [nom du titulaire du copyright]\n"
+"\n"
+"This program is free software: you can redistribute it and/or modify\n"
+"it under the terms of the GNU General Public License as published by\n"
+"the Free Software Foundation, either version 3 of the License, or\n"
+"(at your option) any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful,\n"
+"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
+"GNU General Public License for more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License\n"
+"along with this program.  If not, see <https://www.gnu.org/licenses/>."
 
 #: src/MainWindow.vala:35
 msgid ""
@@ -108,6 +141,19 @@ msgid ""
 "See the License for the specific language governing permissions and\n"
 "limitations under the License."
 msgstr ""
+"Copyright (C) [aaaa] [nom du titulaire du copyright]\n"
+"\n"
+"Licensed under the Apache License, Version 2.0 (the \"License\");\n"
+"you may not use this file except in compliance with the License.\n"
+"You may obtain a copy of the License at\n"
+"\n"
+"    http://www.apache.org/licenses/LICENSE-2.0\n"
+"\n"
+"Unless required by applicable law or agreed to in writing, software\n"
+"distributed under the License is distributed on an \"AS IS\" BASIS,\n"
+"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n"
+"See the License for the specific language governing permissions and\n"
+"limitations under the License."
 
 #: src/MainWindow.vala:36
 msgid ""
@@ -132,6 +178,26 @@ msgid ""
 "TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\n"
 "SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
 msgstr ""
+"Copyright (C) [aaaa] [nom du titulaire du copyright]\n"
+"\n"
+"Permission is hereby granted, free of charge, to any person obtaining\n"
+"a copy of this software and associated documentation files (the\n"
+"\"Software\"), to deal in the Software without restriction, including\n"
+"without limitation the rights to use, copy, modify, merge, publish,\n"
+"distribute, sublicense, and/or sell copies of the Software, and to\n"
+"permit persons to whom the Software is furnished to do so, subject to\n"
+"the following conditions:\n"
+"\n"
+"The above copyright notice and this permission notice shall be\n"
+"included in all copies or substantial portions of the Software.\n"
+"\n"
+"THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\n"
+"EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\n"
+"MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\n"
+"IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\n"
+"CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\n"
+"TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\n"
+"SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
 
 #: src/MainWindow.vala:37
 msgid ""
@@ -160,6 +226,31 @@ msgid ""
 "(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n"
 "OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
 msgstr ""
+"Copyright (C) [aaaa] [nom du titulaire du copyright]\n"
+"\n"
+"Redistribution and use in source and binary forms, with or without\n"
+"modification, are permitted provided that the following conditions\n"
+"are met:\n"
+"\n"
+"1. Redistributions of source code must retain the above copyright\n"
+"notice, this list of conditions and the following disclaimer.\n"
+"\n"
+"2. Redistributions in binary form must reproduce the above copyright\n"
+"notice, this list of conditions and the following disclaimer in the\n"
+"documentation and/or other materials provided with the distribution.\n"
+"\n"
+"THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n"
+"\"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n"
+"LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n"
+"A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n"
+"HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n"
+"SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n"
+"LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n"
+"DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n"
+"THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n"
+"(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n"
+"OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
+
 
 #: src/MainWindow.vala:38
 msgid ""
@@ -192,95 +283,124 @@ msgid ""
 "(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n"
 "OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
 msgstr ""
+"Copyright (C) [aaaa] [nom du titulaire du copyright]\n"
+"\n"
+"Redistribution and use in source and binary forms, with or without\n"
+"modification, are permitted provided that the following conditions\n"
+"are met:\n"
+"\n"
+"1. Redistributions of source code must retain the above copyright\n"
+"notice, this list of conditions and the following disclaimer.\n"
+"\n"
+"2. Redistributions in binary form must reproduce the above copyright\n"
+"notice, this list of conditions and the following disclaimer in the\n"
+"documentation and/or other materials provided with the distribution.\n"
+"\n"
+"3. Neither the name of the copyright holder nor the names of its\n"
+"contributors may be used to endorse or promote products derived from\n"
+"this software without specific prior written permission.\n"
+"\n"
+"THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n"
+"\"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n"
+"LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n"
+"A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n"
+"HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n"
+"SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n"
+"LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n"
+"DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n"
+"THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n"
+"(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n"
+"OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
+
 
 #: src/MainWindow.vala:79
 msgid "Version"
-msgstr ""
+msgstr "Version"
 
 #: src/MainWindow.vala:81
 msgid "Authors"
-msgstr ""
+msgstr "Auteurs"
 
 #: src/MainWindow.vala:84
 msgid "Legal Info"
-msgstr ""
+msgstr "Informations légales"
 
 #: src/MainWindow.vala:88
 msgid "Comment type"
-msgstr ""
+msgstr "Type de commentaire"
 
 #: src/MainWindow.vala:90
 msgid "Show Version"
-msgstr ""
+msgstr "Afficher la version"
 
 #: src/MainWindow.vala:91
 msgid "Show Authors"
-msgstr ""
+msgstr "Afficher les auteurs"
 
 #: src/MainWindow.vala:92
 msgid "Show Legal Info"
-msgstr ""
+msgstr "Afficher les informations légales"
 
 #: src/MainWindow.vala:97
 msgid "Load a legal template"
-msgstr ""
+msgstr "Charger un modèle légal"
 
 #: src/MainWindow.vala:99
 msgid "Use"
-msgstr ""
+msgstr "Utiliser"
 
 #: src/MainWindow.vala:113
 msgid "Copy comment"
-msgstr ""
+msgstr "Copier le commentaire"
 
 #: src/MainWindow.vala:162
 msgid "GPL v2"
-msgstr ""
+msgstr "GPL v2"
 
 #: src/MainWindow.vala:163
 msgid "GPL v3"
-msgstr ""
+msgstr "GPL v3"
 
 #: src/MainWindow.vala:164
 msgid "Apache v2"
-msgstr ""
+msgstr "Apache v2"
 
 #: src/MainWindow.vala:165
 msgid "MIT"
-msgstr ""
+msgstr "MIT"
 
 #: src/MainWindow.vala:166
 msgid "BSD 3-Clause"
-msgstr ""
+msgstr "BSD 3-Clause"
 
 #: src/MainWindow.vala:167
 msgid "BSD 2-Clause"
-msgstr ""
+msgstr "BSD 2-Clause"
 
 #: src/MainWindow.vala:201
 msgid "Bash style"
-msgstr ""
+msgstr "Style Bash"
 
 #: src/MainWindow.vala:202
 msgid "HTML style"
-msgstr ""
+msgstr "Style HTML"
 
 #: src/MainWindow.vala:203
 msgid "Assembly style"
-msgstr ""
+msgstr "Style Assembleur"
 
 #: src/MainWindow.vala:204
 msgid "MySQL style"
-msgstr ""
+msgstr "Style MySQL"
 
 #: src/MainWindow.vala:205
 msgid "Lua block style"
-msgstr ""
+msgstr "Style bloc Lua"
 
 #: src/MainWindow.vala:206
 msgid "Visual Basic style"
-msgstr ""
+msgstr "Style Visual Basic"
 
 #: src/MainWindow.vala:207
 msgid "Plain text"
-msgstr ""
+msgstr "Texte brut"
