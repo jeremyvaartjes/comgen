@@ -36,6 +36,34 @@
     </screenshot>
   </screenshots>
 
+  <releases>
+    <release version="1.0.1" date="2019-02-16">
+      <description>
+        <ul>
+          <li>French translation added by @NathanBnm</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.0" date="2018-11-04">
+      <description>
+        <ul>
+          <li>Data is now auto-saved</li>
+          <li>Updated interface into a single window</li>
+          <li>Added more comment styles</li>
+          <li>You can now import license text for a few open-source licenses</li>
+          <li>Miscellaneous fixes</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.2.6" date="2018-11-01">
+      <description>
+        <ul>
+          <li>Initial Release.</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
+
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">none</content_attribute>
     <content_attribute id="violence-fantasy">none</content_attribute>

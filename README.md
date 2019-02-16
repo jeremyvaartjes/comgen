@@ -1,5 +1,6 @@
-![Comgen Icon](https://raw.githubusercontent.com/jeremyvaartjes/comgen/master/comgen.png)
+[![Build Status](https://travis-ci.com/jeremyvaartjes/comgen.svg?branch=master)](https://travis-ci.com/jeremyvaartjes/comgen)
 
+![Comgen Icon](https://raw.githubusercontent.com/jeremyvaartjes/comgen/master/comgen.png)
 comgen
 ======
 
