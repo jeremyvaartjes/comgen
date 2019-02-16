@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.jeremyvaartjes.comgen\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-03 23:43+1100\n"
+"POT-Creation-Date: 2019-02-16 13:21+1100\n"
 "PO-Revision-Date: 2019-01-26 22:50+0100\n"
 "Last-Translator: NathanBnm\n"
 "Language-Team: Français\n"
@@ -29,7 +29,9 @@ msgstr "Générateur de commentaires"
 #: data/com.github.jeremyvaartjes.comgen.desktop.in:5
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:8
 msgid "Comment Generator: generate styled comments for your code."
-msgstr "Générateur de commentaires : générez des commentaires stylisés pour votre code."
+msgstr ""
+"Générateur de commentaires : générez des commentaires stylisés pour votre "
+"code."
 
 #: data/com.github.jeremyvaartjes.comgen.desktop.in:8
 msgid "com.github.jeremyvaartjes.comgen"
@@ -41,23 +43,78 @@ msgstr "comgen;Commentaire;Générateur;"
 
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:10
 msgid ""
-"For a plain heading, just type in some text and an ascii-art styled heading "
-"comment will be produced."
+"Comment Generator will let you create a header block that can include "
+"elements like an ascii art title, version number, authors and copyright "
+"information."
 msgstr ""
-"Pour un titre simple, il suffit de taper un peu de texte et un commentaire de titre "
-"stylisé en ASCII sera produit."
 
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:11
-msgid ""
-"If you click on the settings button you can add things like version number, "
-"code authors and copyright information. In settings you can now also change "
-"what comment style is used (ie: C++, C, Bash, HTML)."
+msgid "Currently the following comment styles are available for use:"
 msgstr ""
-"Si vous cliquez sur le bouton paramètres, vous pouvez ajouter des éléments tels que le numéro de version, "
-"les auteurs du code et les informations de copyright. Dans les paramètres, vous pouvez également modifier "
-"le style de commentaire utilisé (ex : C, C++, Bash, HTML)."
 
-#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:59
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:13
+msgid "// C++"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:14
+msgid "/* C */"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:15
+msgid "# Bash"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:16
+msgid "&lt;!-- HTML --&gt;"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:17
+#, fuzzy
+msgid "; Assembly"
+msgstr "Style Assembleur"
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:18
+msgid "-- MySQL"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:19
+msgid "--[[ Lua --]]"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:20
+#, fuzzy
+msgid "' Visual Basic"
+msgstr "Style Visual Basic"
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:43
+msgid "French translation added by @NathanBnm"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:50
+msgid "Data is now auto-saved"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:51
+msgid "Updated interface into a single window"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:52
+msgid "Added more comment styles"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:53
+msgid "You can now import license text for a few open-source licenses"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:54
+msgid "Miscellaneous fixes"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:61
+msgid "Initial Release."
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:97
 msgid "Jeremy Vaartjes"
 msgstr "Jeremy Vaartjes"
 
@@ -251,7 +308,6 @@ msgstr ""
 "(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n"
 "OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
 
-
 #: src/MainWindow.vala:38
 msgid ""
 "Copyright (C) [yyyy] [name of copyright owner]\n"
@@ -311,7 +367,6 @@ msgstr ""
 "THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n"
 "(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n"
 "OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
-
 
 #: src/MainWindow.vala:79
 msgid "Version"
@@ -404,3 +459,20 @@ msgstr "Style Visual Basic"
 #: src/MainWindow.vala:207
 msgid "Plain text"
 msgstr "Texte brut"
+
+#~ msgid ""
+#~ "For a plain heading, just type in some text and an ascii-art styled "
+#~ "heading comment will be produced."
+#~ msgstr ""
+#~ "Pour un titre simple, il suffit de taper un peu de texte et un "
+#~ "commentaire de titre stylisé en ASCII sera produit."
+
+#~ msgid ""
+#~ "If you click on the settings button you can add things like version "
+#~ "number, code authors and copyright information. In settings you can now "
+#~ "also change what comment style is used (ie: C++, C, Bash, HTML)."
+#~ msgstr ""
+#~ "Si vous cliquez sur le bouton paramètres, vous pouvez ajouter des "
+#~ "éléments tels que le numéro de version, les auteurs du code et les "
+#~ "informations de copyright. Dans les paramètres, vous pouvez également "
+#~ "modifier le style de commentaire utilisé (ex : C, C++, Bash, HTML)."

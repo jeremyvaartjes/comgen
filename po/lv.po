@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.jeremyvaartjes.comgen\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-03 23:43+1100\n"
+"POT-Creation-Date: 2019-02-16 13:21+1100\n"
 "PO-Revision-Date: 2018-11-03 09:32+1100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -42,18 +42,76 @@ msgstr ""
 
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:10
 msgid ""
-"For a plain heading, just type in some text and an ascii-art styled heading "
-"comment will be produced."
+"Comment Generator will let you create a header block that can include "
+"elements like an ascii art title, version number, authors and copyright "
+"information."
 msgstr ""
 
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:11
-msgid ""
-"If you click on the settings button you can add things like version number, "
-"code authors and copyright information. In settings you can now also change "
-"what comment style is used (ie: C++, C, Bash, HTML)."
+msgid "Currently the following comment styles are available for use:"
 msgstr ""
 
-#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:59
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:13
+msgid "// C++"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:14
+msgid "/* C */"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:15
+msgid "# Bash"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:16
+msgid "&lt;!-- HTML --&gt;"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:17
+msgid "; Assembly"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:18
+msgid "-- MySQL"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:19
+msgid "--[[ Lua --]]"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:20
+msgid "' Visual Basic"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:43
+msgid "French translation added by @NathanBnm"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:50
+msgid "Data is now auto-saved"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:51
+msgid "Updated interface into a single window"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:52
+msgid "Added more comment styles"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:53
+msgid "You can now import license text for a few open-source licenses"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:54
+msgid "Miscellaneous fixes"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:61
+msgid "Initial Release."
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:97
 msgid "Jeremy Vaartjes"
 msgstr ""
 
