@@ -5,7 +5,7 @@
   <metadata_license>CC0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Comgen</name>
-  <summary>Comment Generator: generate styled comments for your code.</summary>
+  <summary>Comment Generator: generate styled comments for your code</summary>
   <description>
     <p>Comment Generator will let you create a header block that can include elements like an ascii art title, version number, authors and copyright information.</p>
     <p>Currently the following comment styles are available for use:</p>
