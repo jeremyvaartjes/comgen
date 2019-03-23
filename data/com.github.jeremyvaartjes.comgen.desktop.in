@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Comgen
 GenericName=Comment Generator
-Comment=Comment Generator: generate styled comments for your code.
+Comment=Comment Generator: generate styled comments for your code
 Categories=Utility;Development;
 Exec=com.github.jeremyvaartjes.comgen
 Icon=com.github.jeremyvaartjes.comgen

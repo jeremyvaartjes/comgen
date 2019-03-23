@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.jeremyvaartjes.comgen\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-16 13:21+1100\n"
+"POT-Creation-Date: 2019-03-23 11:40+0100\n"
 "PO-Revision-Date: 2018-11-03 09:32+1100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -28,7 +28,8 @@ msgstr "Comment Generator"
 
 #: data/com.github.jeremyvaartjes.comgen.desktop.in:5
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:8
-msgid "Comment Generator: generate styled comments for your code."
+#, fuzzy
+msgid "Comment Generator: generate styled comments for your code"
 msgstr "Comment Generator: generate styled comments for your code."
 
 #: data/com.github.jeremyvaartjes.comgen.desktop.in:8
@@ -345,6 +346,9 @@ msgstr ""
 #: src/MainWindow.vala:207
 msgid "Plain text"
 msgstr ""
+
+#~ msgid "Comment Generator: generate styled comments for your code."
+#~ msgstr "Comment Generator: generate styled comments for your code."
 
 #~ msgid ""
 #~ "For a plain heading, just type in some text and an ascii-art styled "
