@@ -5,13 +5,13 @@
  *  |   --| . |     |     | -_|   |  _|  |  |  | -_|   | -_|  _| .'|  _| . |  _|
  *  |_____|___|_|_|_|_|_|_|___|_|_|_|    |_____|___|_|_|___|_| |__,|_| |___|_|  
  *                                                                              
- *                                                                 Version 1.0.1
+ *                                                                 Version 1.0.2
  *  
  *                                            Jeremy Vaartjes <jeremy@vaartj.es>
  *  
  *  ============================================================================
  *  
- *  Copyright (C) 2018 Jeremy Vaartjes
+ *  Copyright (C) 2019 Jeremy Vaartjes
  *  
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
