@@ -25,7 +25,7 @@ figlet_dirs = ['contributed', 'international', 'jave']
 foreach dir : figlet_dirs
     install_subdir(
         join_paths('figlet-fonts', dir),
-        install_dir: join_paths('share', 'figlet'),
+        install_dir: join_paths(get_option('datadir'), 'figlet'),
         strip_directory: true
     )
 endforeach
