@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.jeremyvaartjes.comgen\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-30 09:27+0100\n"
+"POT-Creation-Date: 2019-04-13 15:11+1000\n"
 "PO-Revision-Date: 2018-11-03 09:32+1100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -153,98 +153,102 @@ msgid ""
 "OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
 msgstr ""
 
-#: src/MainWindow.vala:79
+#: src/MainWindow.vala:81
 msgid "Version"
 msgstr ""
 
-#: src/MainWindow.vala:81
+#: src/MainWindow.vala:83
 msgid "Authors"
 msgstr ""
 
-#: src/MainWindow.vala:84
+#: src/MainWindow.vala:86
 msgid "Legal Info"
 msgstr ""
 
-#: src/MainWindow.vala:88
+#: src/MainWindow.vala:90
 msgid "Comment type"
 msgstr ""
 
-#: src/MainWindow.vala:90
+#: src/MainWindow.vala:92
+msgid "Font"
+msgstr ""
+
+#: src/MainWindow.vala:94
 msgid "Show Version"
 msgstr ""
 
-#: src/MainWindow.vala:91
+#: src/MainWindow.vala:95
 msgid "Show Authors"
 msgstr ""
 
-#: src/MainWindow.vala:92
+#: src/MainWindow.vala:96
 msgid "Show Legal Info"
 msgstr ""
 
-#: src/MainWindow.vala:97
+#: src/MainWindow.vala:101
 msgid "Load a legal template"
 msgstr ""
 
-#: src/MainWindow.vala:99
+#: src/MainWindow.vala:103
 msgid "Use"
 msgstr ""
 
-#: src/MainWindow.vala:103
+#: src/MainWindow.vala:107
 msgid "Comment Generator"
 msgstr ""
 
-#: src/MainWindow.vala:113
+#: src/MainWindow.vala:117
 msgid "Copy comment"
 msgstr ""
 
-#: src/MainWindow.vala:162
+#: src/MainWindow.vala:166
 msgid "GPL v2"
 msgstr ""
 
-#: src/MainWindow.vala:163
+#: src/MainWindow.vala:167
 msgid "GPL v3"
 msgstr ""
 
-#: src/MainWindow.vala:164
+#: src/MainWindow.vala:168
 msgid "Apache v2"
 msgstr ""
 
-#: src/MainWindow.vala:165
+#: src/MainWindow.vala:169
 msgid "MIT"
 msgstr ""
 
-#: src/MainWindow.vala:166
+#: src/MainWindow.vala:170
 msgid "BSD 3-Clause"
 msgstr ""
 
-#: src/MainWindow.vala:167
+#: src/MainWindow.vala:171
 msgid "BSD 2-Clause"
 msgstr ""
 
-#: src/MainWindow.vala:201
+#: src/MainWindow.vala:205
 msgid "Bash style"
 msgstr ""
 
-#: src/MainWindow.vala:202
+#: src/MainWindow.vala:206
 msgid "HTML style"
 msgstr ""
 
-#: src/MainWindow.vala:203
+#: src/MainWindow.vala:207
 msgid "Assembly style"
 msgstr ""
 
-#: src/MainWindow.vala:204
+#: src/MainWindow.vala:208
 msgid "MySQL style"
 msgstr ""
 
-#: src/MainWindow.vala:205
+#: src/MainWindow.vala:209
 msgid "Lua block style"
 msgstr ""
 
-#: src/MainWindow.vala:206
+#: src/MainWindow.vala:210
 msgid "Visual Basic style"
 msgstr ""
 
-#: src/MainWindow.vala:207
+#: src/MainWindow.vala:211
 msgid "Plain text"
 msgstr ""

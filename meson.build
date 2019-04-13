@@ -10,7 +10,6 @@ executable(
     'src/Application.vala',
     'src/MainWindow.vala',
     'src/Settings.vala',
-    'src/Chars.vala',
     'src/Generate.vala',
     dependencies: [
         dependency('gtk+-3.0'),
@@ -21,5 +20,14 @@ executable(
 
 subdir('data')
 subdir('po')
+
+figlet_dirs = ['contributed', 'international', 'jave']
+foreach dir : figlet_dirs
+    install_subdir(
+        join_paths('figlet-fonts', dir),
+        install_dir: join_paths('share', 'figlet'),
+        strip_directory: true
+    )
+endforeach
 
 meson.add_install_script('meson/post_install.py')

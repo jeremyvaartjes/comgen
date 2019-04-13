@@ -1,34 +1,33 @@
-/*
- *                                                                              
- *   _____                         _      _____                     _           
- *  |     |___ _____ _____ ___ ___| |_   |   __|___ ___ ___ ___ ___| |_ ___ ___ 
- *  |   --| . |     |     | -_|   |  _|  |  |  | -_|   | -_|  _| .'|  _| . |  _|
- *  |_____|___|_|_|_|_|_|_|___|_|_|_|    |_____|___|_|_|___|_| |__,|_| |___|_|  
- *                                                                              
- *                                                                 Version 1.0.2
- *  
- *                                            Jeremy Vaartjes <jeremy@vaartj.es>
- *  
- *  ============================================================================
- *  
- *  Copyright (C) 2019 Jeremy Vaartjes
- *  
- *  This program is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
- *  
- *  This program is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *  
- *  You should have received a copy of the GNU General Public License
- *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
- *  
- *  ============================================================================
- *  
- */
+//                                                                              
+//   _____                         _      _____                     _           
+//  |     |___ _____ _____ ___ ___| |_   |   __|___ ___ ___ ___ ___| |_ ___ ___ 
+//  |   --| . |     |     | -_|   |  _|  |  |  | -_|   | -_|  _| .'|  _| . |  _|
+//  |_____|___|_|_|_|_|_|_|___|_|_|_|    |_____|___|_|_|___|_| |__,|_| |___|_|  
+//                                                                              
+//  
+//                                                                 Version 1.1.0
+//  
+//                                            Jeremy Vaartjes <jeremy@vaartj.es>
+//  
+//  ============================================================================
+//  
+//  Copyright (C) 2019 Jeremy Vaartjes
+//  
+//  This program is free software: you can redistribute it and/or modify
+//  it under the terms of the GNU General Public License as published by
+//  the Free Software Foundation, either version 3 of the License, or
+//  (at your option) any later version.
+//  
+//  This program is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU General Public License for more details.
+//  
+//  You should have received a copy of the GNU General Public License
+//  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+//  
+//  ============================================================================
+//  
 
 const string LEGAL_GPL2 = _("Copyright (C) [yyyy] [name of copyright owner]\n\nThis program is free software: you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation, either version 2 of the License, or\n(at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with this program.  If not, see <https://www.gnu.org/licenses/>.");
 const string LEGAL_GPL3 = _("Copyright (C) [yyyy] [name of copyright owner]\n\nThis program is free software: you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation, either version 3 of the License, or\n(at your option) any later version.\n\nThis program is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with this program.  If not, see <https://www.gnu.org/licenses/>.");
@@ -56,6 +55,8 @@ public class MainWindow : Gtk.Window {
     Gtk.Grid layoutSettings;
     Gtk.Label typeLabel;
     Gtk.ComboBoxText typeCombo;
+    Gtk.Label fontLabel;
+    Gtk.ComboBoxText fontCombo;
     Gtk.CheckButton versionCheck;
     Gtk.CheckButton authorsCheck;
     Gtk.CheckButton legalCheck;
@@ -87,6 +88,8 @@ public class MainWindow : Gtk.Window {
         layoutSettings = new Gtk.Grid ();
         typeLabel = new Gtk.Label(_("Comment type"));
         typeCombo = new Gtk.ComboBoxText();
+        fontLabel = new Gtk.Label(_("Font"));
+        fontCombo = new Gtk.ComboBoxText();
         versionCheck = new Gtk.CheckButton.with_label (_("Show Version"));
         authorsCheck = new Gtk.CheckButton.with_label (_("Show Authors"));
         legalCheck = new Gtk.CheckButton.with_label (_("Show Legal Info"));
@@ -241,6 +244,41 @@ public class MainWindow : Gtk.Window {
         layoutSettings.attach (typeLabel, 0, 0, 1, 1);
         layoutSettings.attach (typeCombo, 1, 0, 1, 1);
 
+        string fontDir;
+        string stderr;
+	    int status;
+        Process.spawn_command_line_sync ("figlet -I2",
+									out fontDir,
+									out stderr,
+									out status);
+        var directory = File.new_for_path (fontDir.strip());
+        var enumerator = directory.enumerate_children (FileAttribute.STANDARD_NAME, 0);
+        FileInfo file_info;
+        int i = 0;
+        int activeFont = 0;
+        List<string> fontList = new List<string> ();
+        while ((file_info = enumerator.next_file ()) != null) {
+            var filename = file_info.get_name();
+            if(filename.rstr(".") == ".flf" || filename.rstr(".") == ".tlf"){
+                fontList.append(filename.substring(0, filename.last_index_of(".")));
+            }
+        }
+        fontList.sort(strcmp);
+        fontList.foreach((entry) => {
+            fontCombo.append_text(entry);
+            if(entry == settings.font){
+                activeFont = i;
+            }
+            i++;
+        });
+        fontCombo.active = activeFont;
+        fontCombo.changed.connect(() => {
+            settings.font = fontCombo.get_active_text();
+            this.updateMainArea();
+        });
+        layoutSettings.attach (fontLabel, 0, 1, 1, 1);
+        layoutSettings.attach (fontCombo, 1, 1, 1, 1);
+
         versionCheck.toggled.connect (() => {
             settings.show_version = versionCheck.active;
             this.updateMainArea();
@@ -257,7 +295,7 @@ public class MainWindow : Gtk.Window {
         }else{
             versionCheck.set_active(false);
         }
-        layoutSettings.attach (versionCheck, 0, 1, 2, 1);
+        layoutSettings.attach (versionCheck, 0, 2, 2, 1);
 
         authorsCheck.toggled.connect (() => {
             settings.show_authors = authorsCheck.active;
@@ -275,7 +313,7 @@ public class MainWindow : Gtk.Window {
         }else{
             authorsCheck.set_active(false);
         }
-        layoutSettings.attach (authorsCheck, 0, 2, 2, 1);
+        layoutSettings.attach (authorsCheck, 0, 3, 2, 1);
 
         legalCheck.toggled.connect (() => {
             settings.show_legal = legalCheck.active;
@@ -293,7 +331,7 @@ public class MainWindow : Gtk.Window {
         }else{
             legalCheck.set_active(false);
         }
-        layoutSettings.attach (legalCheck, 0, 3, 2, 1);
+        layoutSettings.attach (legalCheck, 0, 4, 2, 1);
 
         settingsPopover.add(layoutSettings);
         settingsBtn.image = new Gtk.Image.from_icon_name ("open-menu", Gtk.IconSize.LARGE_TOOLBAR);
@@ -351,7 +389,7 @@ public class MainWindow : Gtk.Window {
 
         settings.main_text = commentEntry.get_text();
 
-        var gen = new Generate(commentEntry.get_text(), settings.version, settings.authors, settings.legal, settings.comment_type, flags);
+        var gen = new Generate(commentEntry.get_text(), settings.font, settings.version, settings.authors, settings.legal, settings.comment_type, flags);
         copyArea.buffer.text = gen.output;
     }
 }

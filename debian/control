@@ -12,5 +12,5 @@ Standards-Version: 4.1.1
 
 Package: com.github.jeremyvaartjes.comgen
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}, figlet
 Description: Comment Generator: generate styled comments for your code.

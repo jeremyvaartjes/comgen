@@ -48,3 +48,7 @@ To install, use `ninja install`, then execute with `com.github.jeremyvaartjes.co
 sudo ninja install
 com.github.jeremyvaartjes.comgen
 ```
+
+To run the program you will need the following dependencies:
+
+* figlet

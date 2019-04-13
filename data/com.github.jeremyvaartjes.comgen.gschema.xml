@@ -52,5 +52,10 @@
       <summary>Header Text</summary>
       <description>This is the text to be converted into the ASCII art header on launch.</description>
     </key>
+    <key name="font" type="s">
+      <default>'rectangles'</default>
+      <summary>Figlet Font</summary>
+      <description>This is the font to use to generate the ascii art.</description>
+    </key>
   </schema>
 </schemalist>
