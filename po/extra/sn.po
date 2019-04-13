@@ -1,0 +1,114 @@
+# Shona translations for com.github.jeremyvaartjes.comgen package.
+# Copyright (C) 2018 THE com.github.jeremyvaartjes.comgen'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.jeremyvaartjes.comgen package.
+# Automatically generated, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.jeremyvaartjes.comgen\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-30 09:28+0100\n"
+"PO-Revision-Date: 2018-11-03 09:32+1100\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: sn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ASCII\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/com.github.jeremyvaartjes.comgen.desktop.in:3
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:7
+msgid "Comgen"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.desktop.in:4
+msgid "Comment Generator"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.desktop.in:5
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:8
+msgid "Comment Generator: generate styled comments for your code"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.desktop.in:8
+msgid "com.github.jeremyvaartjes.comgen"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.desktop.in:11
+msgid "comgen;Comment;Generator;"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:10
+msgid ""
+"Comment Generator will let you create a header block that can include "
+"elements like an ascii art title, version number, authors and copyright "
+"information."
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:11
+msgid "Currently the following comment styles are available for use:"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:13
+msgid "// C++"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:14
+msgid "/* C */"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:15
+msgid "# Bash"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:16
+msgid "&lt;!-- HTML --&gt;"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:17
+msgid "; Assembly"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:18
+msgid "-- MySQL"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:19
+msgid "--[[ Lua --]]"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:20
+msgid "' Visual Basic"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:43
+msgid "French translation added by @NathanBnm"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:50
+msgid "Data is now auto-saved"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:51
+msgid "Updated interface into a single window"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:52
+msgid "Added more comment styles"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:53
+msgid "You can now import license text for a few open-source licenses"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:54
+msgid "Miscellaneous fixes"
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:61
+msgid "Initial Release."
+msgstr ""
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:97
+msgid "Jeremy Vaartjes"
+msgstr ""

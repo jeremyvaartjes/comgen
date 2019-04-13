@@ -1,0 +1,122 @@
+# French translations for com.github.jeremyvaartjes.comgen package.
+# Copyright (C) 2019 THE com.github.jeremyvaartjes.comgen'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.jeremyvaartjes.comgen package.
+# NathanBnm, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.jeremyvaartjes.comgen\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-30 09:28+0100\n"
+"PO-Revision-Date: 2019-03-23 11:47+0100\n"
+"Last-Translator: NathanBnm\n"
+"Language-Team: Français\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: data/com.github.jeremyvaartjes.comgen.desktop.in:3
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:7
+msgid "Comgen"
+msgstr "Comgen"
+
+#: data/com.github.jeremyvaartjes.comgen.desktop.in:4
+msgid "Comment Generator"
+msgstr "Générateur de commentaires"
+
+#: data/com.github.jeremyvaartjes.comgen.desktop.in:5
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:8
+msgid "Comment Generator: generate styled comments for your code"
+msgstr ""
+"Générateur de commentaires : générez des commentaires stylisés pour votre "
+"code"
+
+#: data/com.github.jeremyvaartjes.comgen.desktop.in:8
+msgid "com.github.jeremyvaartjes.comgen"
+msgstr "com.github.jeremyvaartjes.comgen"
+
+#: data/com.github.jeremyvaartjes.comgen.desktop.in:11
+msgid "comgen;Comment;Generator;"
+msgstr "comgen;Commentaire;Générateur;"
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:10
+msgid ""
+"Comment Generator will let you create a header block that can include "
+"elements like an ascii art title, version number, authors and copyright "
+"information."
+msgstr ""
+"Le générateur de commentaires vous permettra de créer un bloc d'en-tête qui "
+"peut inclure des éléments comme un titre en ascii art, un numéro de version, "
+"des auteurs et des informations de copyright."
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:11
+msgid "Currently the following comment styles are available for use:"
+msgstr "Pour l'instant les styles de commentaire suivants sont disponibles :"
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:13
+msgid "// C++"
+msgstr "// C++"
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:14
+msgid "/* C */"
+msgstr "/* C */"
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:15
+msgid "# Bash"
+msgstr "# Bash"
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:16
+msgid "&lt;!-- HTML --&gt;"
+msgstr "&lt;!-- HTML --&gt;"
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:17
+msgid "; Assembly"
+msgstr "; Assembleur"
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:18
+msgid "-- MySQL"
+msgstr "-- MySQL"
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:19
+msgid "--[[ Lua --]]"
+msgstr "--[[ Lua --]]"
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:20
+msgid "' Visual Basic"
+msgstr "' Visual Basic"
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:43
+msgid "French translation added by @NathanBnm"
+msgstr "Ajout des traductions françaises par @NathanBnm"
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:50
+msgid "Data is now auto-saved"
+msgstr "Les données sont désormais sauvegardées automatiquement"
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:51
+msgid "Updated interface into a single window"
+msgstr "Mise à jour de l'interface en une fenêtre unique"
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:52
+msgid "Added more comment styles"
+msgstr "Ajout de plus de style de commentaire"
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:53
+msgid "You can now import license text for a few open-source licenses"
+msgstr ""
+"Vous pouvez maintenant importer des textes de licence pour quelques licences "
+"libres"
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:54
+msgid "Miscellaneous fixes"
+msgstr "Corrections diverses"
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:61
+msgid "Initial Release."
+msgstr "Version initiale."
+
+#: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:97
+msgid "Jeremy Vaartjes"
+msgstr "Jeremy Vaartjes"
