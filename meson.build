@@ -21,12 +21,25 @@ executable(
 subdir('data')
 subdir('po')
 
-figlet_dirs = ['contributed', 'international', 'jave']
-foreach dir : figlet_dirs
-    install_subdir(
-        join_paths('figlet-fonts', dir),
-        install_dir: join_paths(get_option('datadir'), 'figlet'),
-        strip_directory: true
+figlet_files = [
+    'contributed/rectangles.flf',
+    'contributed/isometric1.flf',
+    'contributed/isometric2.flf',
+    'contributed/isometric3.flf',
+    'contributed/isometric4.flf',
+    'contributed/larry3d.flf',
+    'contributed/ogre.flf',
+    'contributed/graffiti.flf',
+    'contributed/drpepper.flf',
+    'contributed/double.flf',
+    'contributed/doom.flf',
+    'contributed/rounded.flf',
+    'contributed/speed.flf',
+]
+foreach f : figlet_files
+    install_data(
+        join_paths('figlet-fonts', f),
+        install_dir: join_paths(get_option('datadir'), 'figlet')
     )
 endforeach
 
