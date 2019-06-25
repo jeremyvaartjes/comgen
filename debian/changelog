@@ -1,3 +1,10 @@
+com.github.jeremyvaartjes.comgen (1.1.0) bionic; urgency=medium
+
+  * French translation update by @NathanBnm
+  * Multiple fonts now supported. Font files use the figlet font format.
+
+ -- Jeremy Vaartjes <jeremy@vaartj.es>  Tue, 25 Jun 2019 21:59:05 +1000
+
 com.github.jeremyvaartjes.comgen (1.0.1) bionic; urgency=medium
 
   * French translation added by @NathanBnm
