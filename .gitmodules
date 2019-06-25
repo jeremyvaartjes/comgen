@@ -1,3 +1,0 @@
-[submodule "data/figlet-fonts"]
-	path = data/figlet-fonts
-	url = https://github.com/cmatsuoka/figlet-fonts.git

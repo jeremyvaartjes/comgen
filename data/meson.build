@@ -34,19 +34,19 @@ i18n.merge_file(
 )
 
 figlet_files = [
-    'contributed/rectangles.flf',
-    'contributed/isometric1.flf',
-    'contributed/isometric2.flf',
-    'contributed/isometric3.flf',
-    'contributed/isometric4.flf',
-    'contributed/larry3d.flf',
-    'contributed/ogre.flf',
-    'contributed/graffiti.flf',
-    'contributed/drpepper.flf',
-    'contributed/double.flf',
-    'contributed/doom.flf',
-    'contributed/rounded.flf',
-    'contributed/speed.flf',
+    'rectangles.flf',
+    'isometric1.flf',
+    'isometric2.flf',
+    'isometric3.flf',
+    'isometric4.flf',
+    'larry3d.flf',
+    'ogre.flf',
+    'graffiti.flf',
+    'drpepper.flf',
+    'double.flf',
+    'doom.flf',
+    'rounded.flf',
+    'speed.flf',
 ]
 foreach f : figlet_files
     install_data(
