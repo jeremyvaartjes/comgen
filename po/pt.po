@@ -1,25 +1,25 @@
 # Portuguese translations for com.github.jeremyvaartjes.comgen package.
 # Copyright (C) 2018 THE com.github.jeremyvaartjes.comgen'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.jeremyvaartjes.comgen package.
-# Automatically generated, 2018.
+# André Barata <andretiagob@protonmail.com>, 2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.jeremyvaartjes.comgen\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-13 15:11+1000\n"
-"PO-Revision-Date: 2018-11-03 09:32+1100\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2020-08-20 12:26+0100\n"
+"Last-Translator: André Barata <andretiagob@protonmail.com>\n"
 "Language-Team: none\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.4.1\n"
 
 #: src/MainWindow.vala:33
-msgid ""
-"Copyright (C) [yyyy] [name of copyright owner]\n"
+msgid "Copyright (C) [yyyy] [name of copyright owner]\n"
 "\n"
 "This program is free software: you can redistribute it and/or modify\n"
 "it under the terms of the GNU General Public License as published by\n"
@@ -36,8 +36,7 @@ msgid ""
 msgstr ""
 
 #: src/MainWindow.vala:34
-msgid ""
-"Copyright (C) [yyyy] [name of copyright owner]\n"
+msgid "Copyright (C) [yyyy] [name of copyright owner]\n"
 "\n"
 "This program is free software: you can redistribute it and/or modify\n"
 "it under the terms of the GNU General Public License as published by\n"
@@ -54,8 +53,7 @@ msgid ""
 msgstr ""
 
 #: src/MainWindow.vala:35
-msgid ""
-"Copyright (C) [yyyy] [name of copyright owner]\n"
+msgid "Copyright (C) [yyyy] [name of copyright owner]\n"
 "\n"
 "Licensed under the Apache License, Version 2.0 (the \"License\");\n"
 "you may not use this file except in compliance with the License.\n"
@@ -71,8 +69,7 @@ msgid ""
 msgstr ""
 
 #: src/MainWindow.vala:36
-msgid ""
-"Copyright (C) [yyyy] [name of copyright owner]\n"
+msgid "Copyright (C) [yyyy] [name of copyright owner]\n"
 "\n"
 "Permission is hereby granted, free of charge, to any person obtaining\n"
 "a copy of this software and associated documentation files (the\n"
@@ -95,8 +92,7 @@ msgid ""
 msgstr ""
 
 #: src/MainWindow.vala:37
-msgid ""
-"Copyright (C) [yyyy] [name of copyright owner]\n"
+msgid "Copyright (C) [yyyy] [name of copyright owner]\n"
 "\n"
 "Redistribution and use in source and binary forms, with or without\n"
 "modification, are permitted provided that the following conditions\n"
@@ -123,8 +119,7 @@ msgid ""
 msgstr ""
 
 #: src/MainWindow.vala:38
-msgid ""
-"Copyright (C) [yyyy] [name of copyright owner]\n"
+msgid "Copyright (C) [yyyy] [name of copyright owner]\n"
 "\n"
 "Redistribution and use in source and binary forms, with or without\n"
 "modification, are permitted provided that the following conditions\n"
@@ -156,100 +151,100 @@ msgstr ""
 
 #: src/MainWindow.vala:81
 msgid "Version"
-msgstr ""
+msgstr "Versão"
 
 #: src/MainWindow.vala:83
 msgid "Authors"
-msgstr ""
+msgstr "Autores"
 
 #: src/MainWindow.vala:86
 msgid "Legal Info"
-msgstr ""
+msgstr "Informação Legal"
 
 #: src/MainWindow.vala:90
 msgid "Comment type"
-msgstr ""
+msgstr "Tipo de comentário"
 
 #: src/MainWindow.vala:92
 msgid "Font"
-msgstr ""
+msgstr "Fonte"
 
 #: src/MainWindow.vala:94
 msgid "Show Version"
-msgstr ""
+msgstr "Mostrar Versão"
 
 #: src/MainWindow.vala:95
 msgid "Show Authors"
-msgstr ""
+msgstr "Mostrar Autores"
 
 #: src/MainWindow.vala:96
 msgid "Show Legal Info"
-msgstr ""
+msgstr "Mostrar Informação Legal"
 
 #: src/MainWindow.vala:101
 msgid "Load a legal template"
-msgstr ""
+msgstr "Carregar um Modelo Legal"
 
 #: src/MainWindow.vala:103
 msgid "Use"
-msgstr ""
+msgstr "Usar"
 
 #: src/MainWindow.vala:107
 msgid "Comment Generator"
-msgstr ""
+msgstr "Gerador de Comentários"
 
 #: src/MainWindow.vala:117
 msgid "Copy comment"
-msgstr ""
+msgstr "Copiar Comentário"
 
 #: src/MainWindow.vala:166
 msgid "GPL v2"
-msgstr ""
+msgstr "GPL v2"
 
 #: src/MainWindow.vala:167
 msgid "GPL v3"
-msgstr ""
+msgstr "GPL v3"
 
 #: src/MainWindow.vala:168
 msgid "Apache v2"
-msgstr ""
+msgstr "Apache v2"
 
 #: src/MainWindow.vala:169
 msgid "MIT"
-msgstr ""
+msgstr "MIT"
 
 #: src/MainWindow.vala:170
 msgid "BSD 3-Clause"
-msgstr ""
+msgstr "Cláusula - BSD 3"
 
 #: src/MainWindow.vala:171
 msgid "BSD 2-Clause"
-msgstr ""
+msgstr "Cláusula - BSD 2"
 
 #: src/MainWindow.vala:205
 msgid "Bash style"
-msgstr ""
+msgstr "Estilo do Bash"
 
 #: src/MainWindow.vala:206
 msgid "HTML style"
-msgstr ""
+msgstr "Estilo HTML"
 
 #: src/MainWindow.vala:207
 msgid "Assembly style"
-msgstr ""
+msgstr "Estilo Montagem"
 
 #: src/MainWindow.vala:208
 msgid "MySQL style"
-msgstr ""
+msgstr "Estilo MySQL"
 
 #: src/MainWindow.vala:209
 msgid "Lua block style"
-msgstr ""
+msgstr "Estilo Lua block"
 
 #: src/MainWindow.vala:210
 msgid "Visual Basic style"
-msgstr ""
+msgstr "Estilo Visual Basic"
 
 #: src/MainWindow.vala:211
 msgid "Plain text"
-msgstr ""
+msgstr "Texto simples"
