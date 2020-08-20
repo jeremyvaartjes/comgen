@@ -1,115 +1,113 @@
 # Portuguese translations for com.github.jeremyvaartjes.comgen package.
 # Copyright (C) 2018 THE com.github.jeremyvaartjes.comgen'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.jeremyvaartjes.comgen package.
-# Automatically generated, 2018.
+# André Barata <andretiagob@protonmail.com>, 2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.jeremyvaartjes.comgen\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-30 09:28+0100\n"
-"PO-Revision-Date: 2018-11-03 09:32+1100\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2020-08-20 12:37+0100\n"
+"Last-Translator: André Barata <andretiagob@protonmail.com>\n"
 "Language-Team: none\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ASCII\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.4.1\n"
 
 #: data/com.github.jeremyvaartjes.comgen.desktop.in:3
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:7
 msgid "Comgen"
-msgstr ""
+msgstr "Comgen"
 
 #: data/com.github.jeremyvaartjes.comgen.desktop.in:4
 msgid "Comment Generator"
-msgstr ""
+msgstr "Gerador de Comentários"
 
 #: data/com.github.jeremyvaartjes.comgen.desktop.in:5
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:8
 msgid "Comment Generator: generate styled comments for your code"
-msgstr ""
+msgstr "Gerador de Comentários: gera comentários estilizados para o seu código"
 
 #: data/com.github.jeremyvaartjes.comgen.desktop.in:8
 msgid "com.github.jeremyvaartjes.comgen"
-msgstr ""
+msgstr "com.github.jeremyvaartjes.comgen"
 
 #: data/com.github.jeremyvaartjes.comgen.desktop.in:11
 msgid "comgen;Comment;Generator;"
-msgstr ""
+msgstr "comgen;Comentário;Gerador;"
 
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:10
-msgid ""
-"Comment Generator will let you create a header block that can include "
-"elements like an ascii art title, version number, authors and copyright "
-"information."
-msgstr ""
+msgid "Comment Generator will let you create a header block that can include elements like an ascii art title, version number, authors and copyright information."
+msgstr "O Gerador de Comentários deixa-o criar um bloco no cabeçalho que permite incluir elementos como um título em arte ascii, número da versão, autores e informação sobre os direitos de autor."
 
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:11
 msgid "Currently the following comment styles are available for use:"
-msgstr ""
+msgstr "De momento estes são os estilos que estão disponíveis para usar:"
 
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:13
 msgid "// C++"
-msgstr ""
+msgstr "// C++"
 
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:14
 msgid "/* C */"
-msgstr ""
+msgstr "/* C */"
 
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:15
 msgid "# Bash"
-msgstr ""
+msgstr "# Bash"
 
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:16
 msgid "&lt;!-- HTML --&gt;"
-msgstr ""
+msgstr "&lt;!-- HTML --&gt;"
 
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:17
 msgid "; Assembly"
-msgstr ""
+msgstr "; Assembly"
 
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:18
 msgid "-- MySQL"
-msgstr ""
+msgstr "-- MySQL"
 
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:19
 msgid "--[[ Lua --]]"
-msgstr ""
+msgstr "--[[ Lua --]]"
 
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:20
 msgid "' Visual Basic"
-msgstr ""
+msgstr "' Visual Basic"
 
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:43
 msgid "French translation added by @NathanBnm"
-msgstr ""
+msgstr "Tradução Francesa adicionada por  @NathanBnm"
 
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:50
 msgid "Data is now auto-saved"
-msgstr ""
+msgstr "Os dados são agora automaticamente gravados"
 
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:51
 msgid "Updated interface into a single window"
-msgstr ""
+msgstr "Interface atualizada para uma janela simples"
 
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:52
 msgid "Added more comment styles"
-msgstr ""
+msgstr "Adicionados mais estilos de comentários "
 
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:53
 msgid "You can now import license text for a few open-source licenses"
-msgstr ""
+msgstr "Agora você pode importar texto de licenças para algumas licenças de código aberto"
 
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:54
 msgid "Miscellaneous fixes"
-msgstr ""
+msgstr "Correções várias"
 
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:61
 msgid "Initial Release."
-msgstr ""
+msgstr "Lançamento Inicial."
 
 #: data/com.github.jeremyvaartjes.comgen.appdata.xml.in:97
 msgid "Jeremy Vaartjes"
-msgstr ""
+msgstr "Jeremy Vaartjes"
