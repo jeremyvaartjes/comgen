@@ -41,6 +41,7 @@ meson build --prefix=/usr
 cd build
 ninja test
 ```
+(If you get an error message indicating dependancy "granite" missing, also install the following package: `libgranite-dev`)
 
 To install, use `ninja install`, then execute with `com.github.jeremyvaartjes.comgen`
 
