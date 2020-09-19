@@ -33,6 +33,7 @@ If you want to hack on and build Comgen yourself, you'll need the following depe
 * libgtk-3-dev
 * meson
 * valac
+* libgranite-dev
 
 Run `meson build` to configure the build environment and run `ninja test` to build and run automated tests
 
